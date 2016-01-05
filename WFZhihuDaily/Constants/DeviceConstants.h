@@ -15,6 +15,9 @@
 #define kScreenWidth  [UIScreen mainScreen].bounds.size.width
 #define kScreenBounds [UIScreen mainScreen].bounds
 
+#define kKeyWindow [[UIApplication sharedApplication] keyWindow]
+#define kTopView  [[UIApplication sharedApplication] keyWindow].rootViewController.view
+
 #define kMaxMovingOffsetX kScreenWidth * 0.2
 
 #define TopMinY 64.f

@@ -16,4 +16,10 @@
 
 @property(nonatomic,assign) BOOL needUpdate;//是否需要更新，缺省为no
 
+@property(nonatomic,strong)  UIView *navigationBar;
+
+@property(nonatomic,copy)  NSString *navigationTitle;
+
+@property(strong,nonatomic) UITableView  *mainTableView;
+
 @end

@@ -9,7 +9,7 @@
 #import "WFMainController.h"
 #import "WFBaseController.h"
 
-@interface WFMainController ()
+@interface WFMainController ()<UIGestureRecognizerDelegate>
 {
     UIView *_leftMenuView;//左边目录栏的视图
     CGFloat _originX;
@@ -41,6 +41,18 @@
 
 }
 
+- (void)viewWillDisappear:(BOOL)animated{
+
+    [super viewWillDisappear:animated];
+    DLog(@"will disappear");
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    
+    [super viewWillAppear:animated];
+    DLog(@"will Appear");
+}
+
 
 - (void)viewDidLoad {
     
@@ -64,6 +76,7 @@
     
     _leftController.drawerAction = ^(NSString *className){//左抽屉tableview点击事件
     
+       
         for (WFBaseController *vc in weakSelf.controllers) {
             
             if ([NSStringFromClass([vc class]) isEqualToString:className]) {
@@ -95,6 +108,7 @@
     [self convertControllerLayerLevel];
 
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panAction:)];
+    panGesture.delegate = self;
     [self.view addGestureRecognizer:panGesture];
     
     _tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)];
@@ -148,10 +162,29 @@
         }];
 
     }
-    
+    DLog(@"_containerController.child.count = %ld",_containerController.childViewControllers.count);
 }
 
 #pragma mark - 手势相关
+
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
+    
+    if ([gestureRecognizer isKindOfClass:[UIPanGestureRecognizer class]]){
+      
+        CGPoint translation = [(UIPanGestureRecognizer *)gestureRecognizer translationInView:self.view];
+        return fabs(translation.x) > fabs(translation.y);
+    
+    }
+    return NO;
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
+    
+    if ([otherGestureRecognizer isKindOfClass:[XPPanGestureRecognizer class]]) {
+        return NO;
+    }
+    return YES;
+}
 #pragma mark - 平移手势
 - (void)panAction:(UIPanGestureRecognizer *)recongnizer{
     
@@ -228,8 +261,8 @@
                         _containerController.view.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
             
                     } completion:^(BOOL finished) {
-            
-                        [_showViewController.view removeGestureRecognizer:_tapGesture];
+                        _showViewController.view.userInteractionEnabled = YES;
+                        [_containerController.view removeGestureRecognizer:_tapGesture];
                         _isFold = NO;
                     }];
                    
@@ -248,8 +281,8 @@
                     
                 } completion:^(BOOL finished) {
                     
-                    [_showViewController.view removeGestureRecognizer:_tapGesture];
-        
+                    [_containerController.view removeGestureRecognizer:_tapGesture];
+                    _showViewController.view.userInteractionEnabled = YES;
                     _isFold = NO;
                 }];
                 
@@ -264,8 +297,8 @@
                     
                 } completion:^(BOOL finished) {
                     
-                    [_showViewController.view addGestureRecognizer:_tapGesture];
-                  
+                    [_containerController.view addGestureRecognizer:_tapGesture];
+                    _showViewController.view.userInteractionEnabled = NO;
                     _isFold = YES;
                     
                 }];
@@ -299,8 +332,8 @@
         
     } completion:^(BOOL finished) {
         
-        [_showViewController.view removeGestureRecognizer:_tapGesture];
-      
+        [_containerController.view removeGestureRecognizer:_tapGesture];
+        _showViewController.view.userInteractionEnabled = YES;
         _isFold = NO;
     }];
 }

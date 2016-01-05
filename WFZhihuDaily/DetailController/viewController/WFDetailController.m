@@ -1,36 +1,26 @@
 //
-//  WFHomePageController.m
-//  WFZhihu
+//  WFDetailController.m
+//  WFZhihuDaily
 //
-//  Created by xiupintech on 16/1/4.
+//  Created by xiupintech on 16/1/5.
 //  Copyright © 2016年 xiupintech. All rights reserved.
 //
 
-#import "WFHomePageController.h"
+#import "WFDetailController.h"
 
-@interface WFHomePageController ()
+@interface WFDetailController ()
 
 @end
 
-@implementation WFHomePageController
+@implementation WFDetailController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIButton *btn = [UIButton buttonWithType:0];
-    btn.frame = CGRectMake(50, 50, 200, 200);
-    [self.view addSubview:btn];
-    btn.backgroundColor = [UIColor blueColor];
+    self.view.backgroundColor = [UIColor magentaColor];
     
-    DLog(@"home page controller");
     // Do any additional setup after loading the view.
 }
 
-- (void)viewWillAppear:(BOOL)animated{
-    
-    [super viewWillAppear:animated];
-    DLog(@"home page Controller will appear");
-    
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

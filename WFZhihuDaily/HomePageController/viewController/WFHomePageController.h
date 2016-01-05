@@ -7,7 +7,10 @@
 //
 
 #import "WFBaseController.h"
+#import "WFHomePageVM.h"
 
 @interface WFHomePageController : WFBaseController
+
+- (instancetype)initWithViewModel:(WFHomePageVM *)viewModel;
 
 @end

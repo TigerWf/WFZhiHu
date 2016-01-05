@@ -11,7 +11,7 @@
 #import "WFHomePageController.h"
 #import "WFSettingController.h"
 #import "WFCommonController.h"
-
+#import "WFHomePageVM.h"
 
 @interface AppDelegate ()
 
@@ -22,7 +22,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    NSMutableArray *controllers = [NSMutableArray arrayWithObjects:[WFHomePageController new],[WFSettingController new],[WFCommonController new], nil];
+    UINavigationController *homePageNav = [[UINavigationController alloc] initWithRootViewController:[[WFHomePageController alloc] initWithViewModel:[WFHomePageVM new]]];
+    
+    NSMutableArray *controllers = [NSMutableArray arrayWithObjects:homePageNav,[[WFSettingController alloc] init],[[WFCommonController alloc] init], nil];
     
     WFMainController *mainController = [[WFMainController alloc] initWithLeftController:[WFLeftController new] andControllers:controllers];
     self.window.rootViewController = mainController;

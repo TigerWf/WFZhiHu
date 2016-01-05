@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D61D0671C3B9FFF007DF434 /* UINavigationController+XPPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D61D0661C3B9FFF007DF434 /* UINavigationController+XPPopGesture.m */; };
+		5D61D06E1C3BA8E7007DF434 /* WFDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D61D06D1C3BA8E7007DF434 /* WFDetailController.m */; };
+		5D61D0721C3BA905007DF434 /* WFCommonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D61D0711C3BA905007DF434 /* WFCommonController.m */; };
+		5D61D0761C3BA921007DF434 /* WFHomePageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D61D0751C3BA921007DF434 /* WFHomePageController.m */; };
+		5D61D07A1C3BA93A007DF434 /* WFSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D61D0791C3BA93A007DF434 /* WFSettingController.m */; };
+		5D61D0841C3BAA1D007DF434 /* WFHttpMgr.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D61D07D1C3BAA1D007DF434 /* WFHttpMgr.m */; };
+		5D61D0851C3BAA1D007DF434 /* WFManager+MainViewInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D61D0801C3BAA1D007DF434 /* WFManager+MainViewInfo.m */; };
+		5D61D0861C3BAA1D007DF434 /* WFManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D61D0821C3BAA1D007DF434 /* WFManager.m */; };
+		5D61D08D1C3BAF76007DF434 /* WFHomePageVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D61D08C1C3BAF76007DF434 /* WFHomePageVM.m */; };
+		5D61D0901C3BB07C007DF434 /* WFSingelNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D61D08F1C3BB07C007DF434 /* WFSingelNewsModel.m */; };
+		5D61D0931C3BB095007DF434 /* WFLatestNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D61D0921C3BB095007DF434 /* WFLatestNewsModel.m */; };
+		5D61D0961C3BB288007DF434 /* WFToolKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D61D0951C3BB288007DF434 /* WFToolKit.m */; };
+		5D6EA28E1C3BC1AC00C9462E /* WFMainViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6EA28D1C3BC1AC00C9462E /* WFMainViewCell.m */; };
+		5D6EA2911C3BC5B400C9462E /* WFSingelNewsLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6EA2901C3BC5B400C9462E /* WFSingelNewsLayout.m */; };
+		5D6EA2941C3BC66900C9462E /* UIImageView+WFImg.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6EA2931C3BC66900C9462E /* UIImageView+WFImg.m */; };
 		5DF6566C1C3B6B9B00D8F8E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF6566B1C3B6B9B00D8F8E0 /* main.m */; };
 		5DF6566F1C3B6B9B00D8F8E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF6566E1C3B6B9B00D8F8E0 /* AppDelegate.m */; };
 		5DF656721C3B6B9B00D8F8E0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF656711C3B6B9B00D8F8E0 /* ViewController.m */; };
@@ -16,15 +31,43 @@
 		5DF656951C3B6CC100D8F8E0 /* WFBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF656871C3B6CC100D8F8E0 /* WFBaseController.m */; };
 		5DF656961C3B6CC100D8F8E0 /* WFLeftController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF656891C3B6CC100D8F8E0 /* WFLeftController.m */; };
 		5DF656971C3B6CC100D8F8E0 /* WFMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF6568B1C3B6CC100D8F8E0 /* WFMainController.m */; };
-		5DF656981C3B6CC100D8F8E0 /* WFCommonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF6568E1C3B6CC100D8F8E0 /* WFCommonController.m */; };
-		5DF656991C3B6CC100D8F8E0 /* WFHomePageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF656911C3B6CC100D8F8E0 /* WFHomePageController.m */; };
-		5DF6569A1C3B6CC100D8F8E0 /* WFSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF656941C3B6CC100D8F8E0 /* WFSettingController.m */; };
 		9562680C9046DAF9802DE4C0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56D18C7690F4F098F76ED7B6 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0FDA55C05EEB5E00D8263E07 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		56D18C7690F4F098F76ED7B6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D61D0651C3B9FFF007DF434 /* UINavigationController+XPPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+XPPopGesture.h"; sourceTree = "<group>"; };
+		5D61D0661C3B9FFF007DF434 /* UINavigationController+XPPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+XPPopGesture.m"; sourceTree = "<group>"; };
+		5D61D06C1C3BA8E7007DF434 /* WFDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFDetailController.h; sourceTree = "<group>"; };
+		5D61D06D1C3BA8E7007DF434 /* WFDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFDetailController.m; sourceTree = "<group>"; };
+		5D61D0701C3BA905007DF434 /* WFCommonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFCommonController.h; sourceTree = "<group>"; };
+		5D61D0711C3BA905007DF434 /* WFCommonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFCommonController.m; sourceTree = "<group>"; };
+		5D61D0741C3BA921007DF434 /* WFHomePageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFHomePageController.h; sourceTree = "<group>"; };
+		5D61D0751C3BA921007DF434 /* WFHomePageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFHomePageController.m; sourceTree = "<group>"; };
+		5D61D0781C3BA93A007DF434 /* WFSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFSettingController.h; sourceTree = "<group>"; };
+		5D61D0791C3BA93A007DF434 /* WFSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFSettingController.m; sourceTree = "<group>"; };
+		5D61D07C1C3BAA1D007DF434 /* WFHttpMgr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFHttpMgr.h; sourceTree = "<group>"; };
+		5D61D07D1C3BAA1D007DF434 /* WFHttpMgr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFHttpMgr.m; sourceTree = "<group>"; };
+		5D61D07F1C3BAA1D007DF434 /* WFManager+MainViewInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WFManager+MainViewInfo.h"; sourceTree = "<group>"; };
+		5D61D0801C3BAA1D007DF434 /* WFManager+MainViewInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WFManager+MainViewInfo.m"; sourceTree = "<group>"; };
+		5D61D0811C3BAA1D007DF434 /* WFManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFManager.h; sourceTree = "<group>"; };
+		5D61D0821C3BAA1D007DF434 /* WFManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFManager.m; sourceTree = "<group>"; };
+		5D61D0871C3BAA97007DF434 /* ServerInfoConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerInfoConstants.h; sourceTree = "<group>"; };
+		5D61D08B1C3BAF76007DF434 /* WFHomePageVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFHomePageVM.h; sourceTree = "<group>"; };
+		5D61D08C1C3BAF76007DF434 /* WFHomePageVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFHomePageVM.m; sourceTree = "<group>"; };
+		5D61D08E1C3BB07C007DF434 /* WFSingelNewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFSingelNewsModel.h; sourceTree = "<group>"; };
+		5D61D08F1C3BB07C007DF434 /* WFSingelNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFSingelNewsModel.m; sourceTree = "<group>"; };
+		5D61D0911C3BB095007DF434 /* WFLatestNewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFLatestNewsModel.h; sourceTree = "<group>"; };
+		5D61D0921C3BB095007DF434 /* WFLatestNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFLatestNewsModel.m; sourceTree = "<group>"; };
+		5D61D0941C3BB288007DF434 /* WFToolKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFToolKit.h; sourceTree = "<group>"; };
+		5D61D0951C3BB288007DF434 /* WFToolKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFToolKit.m; sourceTree = "<group>"; };
+		5D6EA28C1C3BC1AC00C9462E /* WFMainViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFMainViewCell.h; sourceTree = "<group>"; };
+		5D6EA28D1C3BC1AC00C9462E /* WFMainViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFMainViewCell.m; sourceTree = "<group>"; };
+		5D6EA28F1C3BC5B400C9462E /* WFSingelNewsLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFSingelNewsLayout.h; sourceTree = "<group>"; };
+		5D6EA2901C3BC5B400C9462E /* WFSingelNewsLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFSingelNewsLayout.m; sourceTree = "<group>"; };
+		5D6EA2921C3BC66900C9462E /* UIImageView+WFImg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WFImg.h"; sourceTree = "<group>"; };
+		5D6EA2931C3BC66900C9462E /* UIImageView+WFImg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WFImg.m"; sourceTree = "<group>"; };
 		5DF656671C3B6B9B00D8F8E0 /* WFZhihuDaily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WFZhihuDaily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DF6566B1C3B6B9B00D8F8E0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5DF6566D1C3B6B9B00D8F8E0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -44,12 +87,6 @@
 		5DF656891C3B6CC100D8F8E0 /* WFLeftController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFLeftController.m; sourceTree = "<group>"; };
 		5DF6568A1C3B6CC100D8F8E0 /* WFMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFMainController.h; sourceTree = "<group>"; };
 		5DF6568B1C3B6CC100D8F8E0 /* WFMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFMainController.m; sourceTree = "<group>"; };
-		5DF6568D1C3B6CC100D8F8E0 /* WFCommonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFCommonController.h; sourceTree = "<group>"; };
-		5DF6568E1C3B6CC100D8F8E0 /* WFCommonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFCommonController.m; sourceTree = "<group>"; };
-		5DF656901C3B6CC100D8F8E0 /* WFHomePageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFHomePageController.h; sourceTree = "<group>"; };
-		5DF656911C3B6CC100D8F8E0 /* WFHomePageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFHomePageController.m; sourceTree = "<group>"; };
-		5DF656931C3B6CC100D8F8E0 /* WFSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFSettingController.h; sourceTree = "<group>"; };
-		5DF656941C3B6CC100D8F8E0 /* WFSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFSettingController.m; sourceTree = "<group>"; };
 		8420BF67AF1838D7B6CC5DB5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,6 +102,113 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D61D0601C3B92BC007DF434 /* DetailController */ = {
+			isa = PBXGroup;
+			children = (
+				5D61D06B1C3BA8E7007DF434 /* viewController */,
+			);
+			path = DetailController;
+			sourceTree = "<group>";
+		};
+		5D61D0641C3B9FFF007DF434 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				5D61D0651C3B9FFF007DF434 /* UINavigationController+XPPopGesture.h */,
+				5D61D0661C3B9FFF007DF434 /* UINavigationController+XPPopGesture.m */,
+				5D6EA2921C3BC66900C9462E /* UIImageView+WFImg.h */,
+				5D6EA2931C3BC66900C9462E /* UIImageView+WFImg.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		5D61D06B1C3BA8E7007DF434 /* viewController */ = {
+			isa = PBXGroup;
+			children = (
+				5D61D06C1C3BA8E7007DF434 /* WFDetailController.h */,
+				5D61D06D1C3BA8E7007DF434 /* WFDetailController.m */,
+			);
+			path = viewController;
+			sourceTree = "<group>";
+		};
+		5D61D06F1C3BA905007DF434 /* viewController */ = {
+			isa = PBXGroup;
+			children = (
+				5D61D0701C3BA905007DF434 /* WFCommonController.h */,
+				5D61D0711C3BA905007DF434 /* WFCommonController.m */,
+			);
+			path = viewController;
+			sourceTree = "<group>";
+		};
+		5D61D0731C3BA921007DF434 /* viewController */ = {
+			isa = PBXGroup;
+			children = (
+				5D61D0741C3BA921007DF434 /* WFHomePageController.h */,
+				5D61D0751C3BA921007DF434 /* WFHomePageController.m */,
+			);
+			path = viewController;
+			sourceTree = "<group>";
+		};
+		5D61D0771C3BA93A007DF434 /* viewController */ = {
+			isa = PBXGroup;
+			children = (
+				5D61D0781C3BA93A007DF434 /* WFSettingController.h */,
+				5D61D0791C3BA93A007DF434 /* WFSettingController.m */,
+			);
+			path = viewController;
+			sourceTree = "<group>";
+		};
+		5D61D07B1C3BA9D8007DF434 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				5D61D07E1C3BAA1D007DF434 /* WFHttpRequest */,
+				5D61D07C1C3BAA1D007DF434 /* WFHttpMgr.h */,
+				5D61D07D1C3BAA1D007DF434 /* WFHttpMgr.m */,
+				5D61D0811C3BAA1D007DF434 /* WFManager.h */,
+				5D61D0821C3BAA1D007DF434 /* WFManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		5D61D07E1C3BAA1D007DF434 /* WFHttpRequest */ = {
+			isa = PBXGroup;
+			children = (
+				5D61D07F1C3BAA1D007DF434 /* WFManager+MainViewInfo.h */,
+				5D61D0801C3BAA1D007DF434 /* WFManager+MainViewInfo.m */,
+			);
+			path = WFHttpRequest;
+			sourceTree = "<group>";
+		};
+		5D61D0881C3BAF31007DF434 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				5D61D08E1C3BB07C007DF434 /* WFSingelNewsModel.h */,
+				5D61D08F1C3BB07C007DF434 /* WFSingelNewsModel.m */,
+				5D6EA28F1C3BC5B400C9462E /* WFSingelNewsLayout.h */,
+				5D6EA2901C3BC5B400C9462E /* WFSingelNewsLayout.m */,
+				5D61D0911C3BB095007DF434 /* WFLatestNewsModel.h */,
+				5D61D0921C3BB095007DF434 /* WFLatestNewsModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		5D61D0891C3BAF31007DF434 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				5D6EA28C1C3BC1AC00C9462E /* WFMainViewCell.h */,
+				5D6EA28D1C3BC1AC00C9462E /* WFMainViewCell.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		5D61D08A1C3BAF31007DF434 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5D61D08B1C3BAF76007DF434 /* WFHomePageVM.h */,
+				5D61D08C1C3BAF76007DF434 /* WFHomePageVM.m */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
 		5DF6565E1C3B6B9B00D8F8E0 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +234,9 @@
 				5DF6566E1C3B6B9B00D8F8E0 /* AppDelegate.m */,
 				5DF656701C3B6B9B00D8F8E0 /* ViewController.h */,
 				5DF656711C3B6B9B00D8F8E0 /* ViewController.m */,
+				5D61D07B1C3BA9D8007DF434 /* Manager */,
+				5D61D0641C3B9FFF007DF434 /* Category */,
+				5D61D0601C3B92BC007DF434 /* DetailController */,
 				5DF656851C3B6CC100D8F8E0 /* BaseViewController */,
 				5DF6568C1C3B6CC100D8F8E0 /* CommonController */,
 				5DF6568F1C3B6CC100D8F8E0 /* HomePageController */,
@@ -116,8 +263,11 @@
 		5DF656821C3B6C8F00D8F8E0 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				5D61D0871C3BAA97007DF434 /* ServerInfoConstants.h */,
 				5DF656831C3B6C8F00D8F8E0 /* DeviceConstants.h */,
 				5DF656841C3B6C8F00D8F8E0 /* ToolKitConstants.h */,
+				5D61D0941C3BB288007DF434 /* WFToolKit.h */,
+				5D61D0951C3BB288007DF434 /* WFToolKit.m */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -138,8 +288,7 @@
 		5DF6568C1C3B6CC100D8F8E0 /* CommonController */ = {
 			isa = PBXGroup;
 			children = (
-				5DF6568D1C3B6CC100D8F8E0 /* WFCommonController.h */,
-				5DF6568E1C3B6CC100D8F8E0 /* WFCommonController.m */,
+				5D61D06F1C3BA905007DF434 /* viewController */,
 			);
 			path = CommonController;
 			sourceTree = "<group>";
@@ -147,8 +296,10 @@
 		5DF6568F1C3B6CC100D8F8E0 /* HomePageController */ = {
 			isa = PBXGroup;
 			children = (
-				5DF656901C3B6CC100D8F8E0 /* WFHomePageController.h */,
-				5DF656911C3B6CC100D8F8E0 /* WFHomePageController.m */,
+				5D61D0881C3BAF31007DF434 /* model */,
+				5D61D0891C3BAF31007DF434 /* view */,
+				5D61D08A1C3BAF31007DF434 /* viewModel */,
+				5D61D0731C3BA921007DF434 /* viewController */,
 			);
 			path = HomePageController;
 			sourceTree = "<group>";
@@ -156,8 +307,7 @@
 		5DF656921C3B6CC100D8F8E0 /* SettingController */ = {
 			isa = PBXGroup;
 			children = (
-				5DF656931C3B6CC100D8F8E0 /* WFSettingController.h */,
-				5DF656941C3B6CC100D8F8E0 /* WFSettingController.m */,
+				5D61D0771C3BA93A007DF434 /* viewController */,
 			);
 			path = SettingController;
 			sourceTree = "<group>";
@@ -300,15 +450,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DF656991C3B6CC100D8F8E0 /* WFHomePageController.m in Sources */,
 				5DF656721C3B6B9B00D8F8E0 /* ViewController.m in Sources */,
+				5D61D0841C3BAA1D007DF434 /* WFHttpMgr.m in Sources */,
 				5DF656971C3B6CC100D8F8E0 /* WFMainController.m in Sources */,
+				5D61D0851C3BAA1D007DF434 /* WFManager+MainViewInfo.m in Sources */,
+				5D61D0931C3BB095007DF434 /* WFLatestNewsModel.m in Sources */,
+				5D6EA28E1C3BC1AC00C9462E /* WFMainViewCell.m in Sources */,
+				5D61D0671C3B9FFF007DF434 /* UINavigationController+XPPopGesture.m in Sources */,
 				5DF656961C3B6CC100D8F8E0 /* WFLeftController.m in Sources */,
+				5D61D07A1C3BA93A007DF434 /* WFSettingController.m in Sources */,
+				5D61D0761C3BA921007DF434 /* WFHomePageController.m in Sources */,
+				5D61D0721C3BA905007DF434 /* WFCommonController.m in Sources */,
+				5D61D08D1C3BAF76007DF434 /* WFHomePageVM.m in Sources */,
 				5DF656951C3B6CC100D8F8E0 /* WFBaseController.m in Sources */,
+				5D6EA2911C3BC5B400C9462E /* WFSingelNewsLayout.m in Sources */,
+				5D61D0901C3BB07C007DF434 /* WFSingelNewsModel.m in Sources */,
 				5DF6566F1C3B6B9B00D8F8E0 /* AppDelegate.m in Sources */,
-				5DF656981C3B6CC100D8F8E0 /* WFCommonController.m in Sources */,
-				5DF6569A1C3B6CC100D8F8E0 /* WFSettingController.m in Sources */,
+				5D61D06E1C3BA8E7007DF434 /* WFDetailController.m in Sources */,
+				5D61D0861C3BAA1D007DF434 /* WFManager.m in Sources */,
+				5D6EA2941C3BC66900C9462E /* UIImageView+WFImg.m in Sources */,
 				5DF6566C1C3B6B9B00D8F8E0 /* main.m in Sources */,
+				5D61D0961C3BB288007DF434 /* WFToolKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +583,7 @@
 			baseConfigurationReference = 0FDA55C05EEB5E00D8263E07 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WFZhihuDaily/PrefixHeader.pch";
 				INFOPLIST_FILE = WFZhihuDaily/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -434,6 +597,7 @@
 			baseConfigurationReference = 8420BF67AF1838D7B6CC5DB5 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WFZhihuDaily/PrefixHeader.pch";
 				INFOPLIST_FILE = WFZhihuDaily/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
