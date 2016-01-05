@@ -1,0 +1,9 @@
+platform :ios, '7.0'
+pod 'AFNetworking','~>2.0'
+pod 'SDWebImage', '~>3.7'
+pod 'MJRefresh'
+pod 'MJExtension'
+pod 'FMDB'
+pod 'FLAnimatedImage', '~> 1.0.7'
+pod 'Masonry'
+
