@@ -8,6 +8,8 @@
 
 #import "WFMainController.h"
 #import "WFBaseController.h"
+#import "WFLeftDataModel.h"
+
 
 @interface WFMainController ()<UIGestureRecognizerDelegate>
 {
@@ -64,10 +66,9 @@
     
     WS(weakSelf);
     
-    for (WFBaseController *vc in _controllers) {//左抽屉的tableview 数据源
-       
-        [_leftController.drawerSource addObject:NSStringFromClass([vc class])];
-    }
+    [_leftController.viewModel requestLeftData:_controllers];
+    
+   
     
     _leftMenuView = [[UIView alloc] init];
     _leftMenuView = _leftController.view;

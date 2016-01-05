@@ -27,11 +27,13 @@
 		5DF656721C3B6B9B00D8F8E0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF656711C3B6B9B00D8F8E0 /* ViewController.m */; };
 		5DF656751C3B6B9B00D8F8E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DF656731C3B6B9B00D8F8E0 /* Main.storyboard */; };
 		5DF656771C3B6B9B00D8F8E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DF656761C3B6B9B00D8F8E0 /* Assets.xcassets */; };
-		5DF6567A1C3B6B9B00D8F8E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DF656781C3B6B9B00D8F8E0 /* LaunchScreen.storyboard */; };
 		5DF656951C3B6CC100D8F8E0 /* WFBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF656871C3B6CC100D8F8E0 /* WFBaseController.m */; };
-		5DF656961C3B6CC100D8F8E0 /* WFLeftController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF656891C3B6CC100D8F8E0 /* WFLeftController.m */; };
 		5DF656971C3B6CC100D8F8E0 /* WFMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF6568B1C3B6CC100D8F8E0 /* WFMainController.m */; };
 		9562680C9046DAF9802DE4C0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56D18C7690F4F098F76ED7B6 /* libPods.a */; };
+		D288D4691C3C1DE00034B742 /* WFLeftController.m in Sources */ = {isa = PBXBuildFile; fileRef = D288D4681C3C1DE00034B742 /* WFLeftController.m */; };
+		D288D46C1C3C1E050034B742 /* WFLeftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D288D46B1C3C1E050034B742 /* WFLeftCell.m */; };
+		D288D46F1C3C228C0034B742 /* WFLeftDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D288D46E1C3C228C0034B742 /* WFLeftDataModel.m */; };
+		D288D4721C3C23790034B742 /* WFLeftVM.m in Sources */ = {isa = PBXBuildFile; fileRef = D288D4711C3C23780034B742 /* WFLeftVM.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,18 +78,23 @@
 		5DF656711C3B6B9B00D8F8E0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5DF656741C3B6B9B00D8F8E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5DF656761C3B6B9B00D8F8E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5DF656791C3B6B9B00D8F8E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5DF6567B1C3B6B9B00D8F8E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DF656811C3B6C3900D8F8E0 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		5DF656831C3B6C8F00D8F8E0 /* DeviceConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceConstants.h; sourceTree = "<group>"; };
 		5DF656841C3B6C8F00D8F8E0 /* ToolKitConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolKitConstants.h; sourceTree = "<group>"; };
 		5DF656861C3B6CC100D8F8E0 /* WFBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFBaseController.h; sourceTree = "<group>"; };
 		5DF656871C3B6CC100D8F8E0 /* WFBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFBaseController.m; sourceTree = "<group>"; };
-		5DF656881C3B6CC100D8F8E0 /* WFLeftController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFLeftController.h; sourceTree = "<group>"; };
-		5DF656891C3B6CC100D8F8E0 /* WFLeftController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFLeftController.m; sourceTree = "<group>"; };
 		5DF6568A1C3B6CC100D8F8E0 /* WFMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFMainController.h; sourceTree = "<group>"; };
 		5DF6568B1C3B6CC100D8F8E0 /* WFMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFMainController.m; sourceTree = "<group>"; };
 		8420BF67AF1838D7B6CC5DB5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		D288D4671C3C1DE00034B742 /* WFLeftController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFLeftController.h; sourceTree = "<group>"; };
+		D288D4681C3C1DE00034B742 /* WFLeftController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFLeftController.m; sourceTree = "<group>"; };
+		D288D46A1C3C1E050034B742 /* WFLeftCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFLeftCell.h; sourceTree = "<group>"; };
+		D288D46B1C3C1E050034B742 /* WFLeftCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFLeftCell.m; sourceTree = "<group>"; };
+		D288D46D1C3C228C0034B742 /* WFLeftDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFLeftDataModel.h; sourceTree = "<group>"; };
+		D288D46E1C3C228C0034B742 /* WFLeftDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFLeftDataModel.m; sourceTree = "<group>"; };
+		D288D4701C3C23780034B742 /* WFLeftVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFLeftVM.h; sourceTree = "<group>"; };
+		D288D4711C3C23780034B742 /* WFLeftVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFLeftVM.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +241,7 @@
 				5DF6566E1C3B6B9B00D8F8E0 /* AppDelegate.m */,
 				5DF656701C3B6B9B00D8F8E0 /* ViewController.h */,
 				5DF656711C3B6B9B00D8F8E0 /* ViewController.m */,
+				D288D4621C3C1DA60034B742 /* LeftDrawerController */,
 				5D61D07B1C3BA9D8007DF434 /* Manager */,
 				5D61D0641C3B9FFF007DF434 /* Category */,
 				5D61D0601C3B92BC007DF434 /* DetailController */,
@@ -244,7 +252,6 @@
 				5DF656821C3B6C8F00D8F8E0 /* Constants */,
 				5DF656731C3B6B9B00D8F8E0 /* Main.storyboard */,
 				5DF656761C3B6B9B00D8F8E0 /* Assets.xcassets */,
-				5DF656781C3B6B9B00D8F8E0 /* LaunchScreen.storyboard */,
 				5DF6567B1C3B6B9B00D8F8E0 /* Info.plist */,
 				5DF656811C3B6C3900D8F8E0 /* PrefixHeader.pch */,
 				5DF6566A1C3B6B9B00D8F8E0 /* Supporting Files */,
@@ -277,8 +284,6 @@
 			children = (
 				5DF656861C3B6CC100D8F8E0 /* WFBaseController.h */,
 				5DF656871C3B6CC100D8F8E0 /* WFBaseController.m */,
-				5DF656881C3B6CC100D8F8E0 /* WFLeftController.h */,
-				5DF656891C3B6CC100D8F8E0 /* WFLeftController.m */,
 				5DF6568A1C3B6CC100D8F8E0 /* WFMainController.h */,
 				5DF6568B1C3B6CC100D8F8E0 /* WFMainController.m */,
 			);
@@ -327,6 +332,54 @@
 				56D18C7690F4F098F76ED7B6 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D288D4621C3C1DA60034B742 /* LeftDrawerController */ = {
+			isa = PBXGroup;
+			children = (
+				D288D4631C3C1DA60034B742 /* model */,
+				D288D4641C3C1DA60034B742 /* view */,
+				D288D4651C3C1DA60034B742 /* viewController */,
+				D288D4661C3C1DA60034B742 /* viewModel */,
+			);
+			name = LeftDrawerController;
+			path = Manager/LeftDrawerController;
+			sourceTree = "<group>";
+		};
+		D288D4631C3C1DA60034B742 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				D288D46D1C3C228C0034B742 /* WFLeftDataModel.h */,
+				D288D46E1C3C228C0034B742 /* WFLeftDataModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		D288D4641C3C1DA60034B742 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				D288D46A1C3C1E050034B742 /* WFLeftCell.h */,
+				D288D46B1C3C1E050034B742 /* WFLeftCell.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		D288D4651C3C1DA60034B742 /* viewController */ = {
+			isa = PBXGroup;
+			children = (
+				D288D4671C3C1DE00034B742 /* WFLeftController.h */,
+				D288D4681C3C1DE00034B742 /* WFLeftController.m */,
+			);
+			path = viewController;
+			sourceTree = "<group>";
+		};
+		D288D4661C3C1DA60034B742 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D288D4701C3C23780034B742 /* WFLeftVM.h */,
+				D288D4711C3C23780034B742 /* WFLeftVM.m */,
+			);
+			path = viewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,7 +442,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DF6567A1C3B6B9B00D8F8E0 /* LaunchScreen.storyboard in Resources */,
 				5DF656771C3B6B9B00D8F8E0 /* Assets.xcassets in Resources */,
 				5DF656751C3B6B9B00D8F8E0 /* Main.storyboard in Resources */,
 			);
@@ -452,12 +504,15 @@
 			files = (
 				5DF656721C3B6B9B00D8F8E0 /* ViewController.m in Sources */,
 				5D61D0841C3BAA1D007DF434 /* WFHttpMgr.m in Sources */,
+				D288D4691C3C1DE00034B742 /* WFLeftController.m in Sources */,
 				5DF656971C3B6CC100D8F8E0 /* WFMainController.m in Sources */,
 				5D61D0851C3BAA1D007DF434 /* WFManager+MainViewInfo.m in Sources */,
+				D288D46C1C3C1E050034B742 /* WFLeftCell.m in Sources */,
 				5D61D0931C3BB095007DF434 /* WFLatestNewsModel.m in Sources */,
 				5D6EA28E1C3BC1AC00C9462E /* WFMainViewCell.m in Sources */,
+				D288D4721C3C23790034B742 /* WFLeftVM.m in Sources */,
 				5D61D0671C3B9FFF007DF434 /* UINavigationController+XPPopGesture.m in Sources */,
-				5DF656961C3B6CC100D8F8E0 /* WFLeftController.m in Sources */,
+				D288D46F1C3C228C0034B742 /* WFLeftDataModel.m in Sources */,
 				5D61D07A1C3BA93A007DF434 /* WFSettingController.m in Sources */,
 				5D61D0761C3BA921007DF434 /* WFHomePageController.m in Sources */,
 				5D61D0721C3BA905007DF434 /* WFCommonController.m in Sources */,
@@ -483,14 +538,6 @@
 				5DF656741C3B6B9B00D8F8E0 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		5DF656781C3B6B9B00D8F8E0 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5DF656791C3B6B9B00D8F8E0 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -586,6 +633,7 @@
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WFZhihuDaily/PrefixHeader.pch";
 				INFOPLIST_FILE = WFZhihuDaily/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xiupin.WFZhihuDaily;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -600,6 +648,7 @@
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WFZhihuDaily/PrefixHeader.pch";
 				INFOPLIST_FILE = WFZhihuDaily/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xiupin.WFZhihuDaily;
 				PRODUCT_NAME = "$(TARGET_NAME)";

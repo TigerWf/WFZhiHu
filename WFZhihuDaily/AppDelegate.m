@@ -12,6 +12,7 @@
 #import "WFSettingController.h"
 #import "WFCommonController.h"
 #import "WFHomePageVM.h"
+#import "WFLeftVM.h"
 
 @interface AppDelegate ()
 
@@ -24,9 +25,9 @@
     
     UINavigationController *homePageNav = [[UINavigationController alloc] initWithRootViewController:[[WFHomePageController alloc] initWithViewModel:[WFHomePageVM new]]];
     
-    NSMutableArray *controllers = [NSMutableArray arrayWithObjects:homePageNav,[[WFSettingController alloc] init],[[WFCommonController alloc] init], nil];
+    NSMutableArray *controllers = [NSMutableArray arrayWithObjects:homePageNav,[[WFCommonController alloc] init], nil];
     
-    WFMainController *mainController = [[WFMainController alloc] initWithLeftController:[WFLeftController new] andControllers:controllers];
+    WFMainController *mainController = [[WFMainController alloc] initWithLeftController:[[WFLeftController alloc] initWithViewModel:[WFLeftVM new]] andControllers:controllers];
     self.window.rootViewController = mainController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

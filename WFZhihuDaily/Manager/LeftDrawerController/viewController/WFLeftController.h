@@ -7,14 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WFLeftVM.h"
 
 typedef void(^LeftDrawerAction)(NSString *);
 
 @interface WFLeftController : UIViewController
 
-@property (nonatomic, strong) NSMutableArray *drawerSource;//数据源
-
 @property (nonatomic, copy) LeftDrawerAction drawerAction;
 
+@property (nonatomic,strong) WFLeftVM *viewModel;
+
+- (instancetype)initWithViewModel:(WFLeftVM *)viewModel;
 
 @end

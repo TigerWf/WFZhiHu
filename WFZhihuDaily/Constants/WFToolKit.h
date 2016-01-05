@@ -11,5 +11,6 @@
 UIColor *RGBColor(float R,float G,float B,float A);
 
 
+void setExtraCellLineHidden(UITableView *tableView);
 
 

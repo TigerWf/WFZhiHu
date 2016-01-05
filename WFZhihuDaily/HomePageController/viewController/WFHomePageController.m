@@ -12,7 +12,7 @@
 
 @interface WFHomePageController ()<UITableViewDelegate,UITableViewDataSource>
 {
-    NSMutableArray *_singleModelArray;//单条消息的数据源
+    
 }
 @property(strong,nonatomic) WFHomePageVM *viewModel;
 
@@ -28,7 +28,6 @@ static NSString * const kCellID = @"WFCell";
   
     if (self == [super init]) {
         self.viewModel = viewModel;
-        _singleModelArray = [[NSMutableArray alloc] init];
     }
     return self;
 

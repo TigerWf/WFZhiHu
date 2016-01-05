@@ -7,60 +7,67 @@
 //
 
 #import "WFLeftController.h"
+#import "WFLeftCell.h"
 
 @interface WFLeftController ()<UITableViewDataSource,UITableViewDelegate>
 {
     UITableView *_mainTable;
 }
+
+
 @end
 
 @implementation WFLeftController
 
 #pragma mark - CELL REUSE ID
-static NSString * const kMallCellID = @"XPMallCell";
+static NSString * const kLeftCellID = @"WFLeftCell";
 
-- (id)init{
+- (id)initWithViewModel:(WFLeftVM *)viewModel{
 
     if (self == [super init]) {
-        _drawerSource = [[NSMutableArray alloc] init];
+      
+        _viewModel = viewModel;
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor redColor];
+    self.view.backgroundColor = RGBColor(35, 42, 48, 1.0);
     [self configUI];
 }
 
 - (void)configUI{
    
-    _mainTable = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
+    _mainTable = [[UITableView alloc] initWithFrame:CGRectMake(0, 105, kScreenWidth, kScreenHeight- 105)];
     _mainTable.delegate = self;
     _mainTable.dataSource = self;
-
+    _mainTable.backgroundColor = RGBColor(35, 42, 48, 1.0);
+    _mainTable.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:_mainTable];
+
+    
     [self registCellClass];
 }
 
 - (void)registCellClass{
-    [_mainTable registerClass:[UITableViewCell class] forCellReuseIdentifier:kMallCellID];
+    [_mainTable registerClass:[WFLeftCell class] forCellReuseIdentifier:kLeftCellID];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    return 200;
+    return 44;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return _drawerSource.count;
+    return [_viewModel numberOfRowsInSection:section];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kMallCellID forIndexPath:indexPath];
-    cell.textLabel.text = [_drawerSource objectAtIndex:indexPath.row];
+    WFLeftCell *cell = [tableView dequeueReusableCellWithIdentifier:kLeftCellID forIndexPath:indexPath];
+    cell.leftDataString = [_viewModel leftSubfieldAtIndexPath:indexPath];
     return cell;
 
 }
@@ -68,7 +75,8 @@ static NSString * const kMallCellID = @"XPMallCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    _drawerAction([_drawerSource objectAtIndex:indexPath.row]);
+
+    _drawerAction([_viewModel leftListClickAction:indexPath]);
 
 }
 
