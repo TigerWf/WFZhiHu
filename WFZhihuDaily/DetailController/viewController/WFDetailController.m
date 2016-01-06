@@ -7,34 +7,126 @@
 //
 
 #import "WFDetailController.h"
+#import "WFDetailHeaderView.h"
+#import "WFWebView.h"
+#import "WFBottomBarView.h"
 
-@interface WFDetailController ()
+@interface WFDetailController ()<WFBottomBarDelegate>
+{
+    WFWebView *_detailWeb;
+    WFDetailHeaderView *_detailHeaderView;
+    WFBottomBarView *_detailBottomView;
+}
+@property(strong,nonatomic) WFDetailVM *viewModel;
 
 @end
 
 @implementation WFDetailController
 
+- (instancetype)initWithViewModel:(WFDetailVM *)viewModel{
+
+    if (self == [super init]) {
+        self.viewModel = viewModel;
+    }
+    return self;
+}
+
+#pragma mark - View Load
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    self.view.backgroundColor = [UIColor magentaColor];
     
-    // Do any additional setup after loading the view.
+    [super viewDidLoad];
+    WS(weakSelf);
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.extendedLayoutIncludesOpaqueBars = YES;
+    [self configUI];
+    [_viewModel requestWebViewData:^{
+        [weakSelf refreshUI];
+    }];
+    
+
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)configUI{
+
+    _detailWeb = [[WFWebView alloc] initWithFrame:CGRectMake(0, 20, kScreenWidth, kScreenHeight - 20 - 44)];
+    _detailWeb.scrollView.delegate = self;
+    [self.view addSubview:_detailWeb];
+    
+    _detailHeaderView = [[WFDetailHeaderView alloc] initWithFrame:CGRectMake(0, -40, kScreenWidth, 260)];
+    [self.view addSubview:_detailHeaderView];
+    _detailHeaderView.webView = _detailWeb;
+    
+    _detailBottomView = [[WFBottomBarView alloc] initWithFrame:CGRectMake(0, kScreenHeight - 50.f, kScreenWidth, 50.f)];
+    _detailBottomView.delegate = self;
+    [self.view addSubview:_detailBottomView];
+    
 }
 
-/*
-#pragma mark - Navigation
+- (void)refreshUI{
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    [_detailWeb loadHTMLString:[_viewModel loadWebViewHtml] baseURL:nil];
+    [_detailHeaderView refreshHeaderView:_viewModel];
 }
-*/
+
+#pragma mark - UIScrollView Delegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+
+    CGFloat offSetY = scrollView.contentOffset.y;
+
+    if (-offSetY <= 80 && -offSetY >= 0) {
+        
+        [_detailHeaderView wf_parallaxHeaderViewWithOffset:offSetY];
+       
+        if (-offSetY > 40 && !_detailWeb.scrollView.isDragging){
+            //[self.viewmodel getPreviousStoryContent];
+        }
+    }else if (-offSetY > 80) {
+        
+        _detailWeb.scrollView.contentOffset = CGPointMake(0, -80);
+        
+    }else if (offSetY <= 300 ){
+        _detailHeaderView.frame = CGRectMake(0, -40 - offSetY, kScreenWidth, 260);
+    }
+    
+    if (offSetY + kScreenHeight > scrollView.contentSize.height + 160 && !_detailWeb.scrollView.isDragging) {
+        // [self.viewmodel getNextStoryContent];
+    }
+
+}
+
+#pragma mark - WFBottomBarDelegate - 
+- (void)selectBtn:(UIButton *)button{
+    
+    switch (button.tag - kBottomTag){
+        case 0:
+        {
+            [self.navigationController popViewControllerAnimated:YES];
+            break;
+        }
+        case 1:
+        {
+            
+            break;
+        }
+        case 2:
+        {
+            break;
+        }
+        case 3:
+        {
+            
+        }
+        default:
+            break;
+    }
+}
 
 @end

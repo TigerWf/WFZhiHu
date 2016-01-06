@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5D61D0671C3B9FFF007DF434 /* UINavigationController+XPPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D61D0661C3B9FFF007DF434 /* UINavigationController+XPPopGesture.m */; };
 		5D61D06E1C3BA8E7007DF434 /* WFDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D61D06D1C3BA8E7007DF434 /* WFDetailController.m */; };
-		5D61D0721C3BA905007DF434 /* WFCommonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D61D0711C3BA905007DF434 /* WFCommonController.m */; };
 		5D61D0761C3BA921007DF434 /* WFHomePageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D61D0751C3BA921007DF434 /* WFHomePageController.m */; };
 		5D61D07A1C3BA93A007DF434 /* WFSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D61D0791C3BA93A007DF434 /* WFSettingController.m */; };
 		5D61D0841C3BAA1D007DF434 /* WFHttpMgr.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D61D07D1C3BAA1D007DF434 /* WFHttpMgr.m */; };
@@ -22,6 +21,32 @@
 		5D6EA28E1C3BC1AC00C9462E /* WFMainViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6EA28D1C3BC1AC00C9462E /* WFMainViewCell.m */; };
 		5D6EA2911C3BC5B400C9462E /* WFSingelNewsLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6EA2901C3BC5B400C9462E /* WFSingelNewsLayout.m */; };
 		5D6EA2941C3BC66900C9462E /* UIImageView+WFImg.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6EA2931C3BC66900C9462E /* UIImageView+WFImg.m */; };
+		5DA913541C3CBDA5002C23C2 /* WFCommonVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA913531C3CBDA5002C23C2 /* WFCommonVM.m */; };
+		5DA913711C3CBDBB002C23C2 /* WFCommonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA913571C3CBDBB002C23C2 /* WFCommonController.m */; };
+		5DA913721C3CBDBB002C23C2 /* WFCartoonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA9135A1C3CBDBB002C23C2 /* WFCartoonController.m */; };
+		5DA913731C3CBDBB002C23C2 /* WFCompanyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA9135C1C3CBDBB002C23C2 /* WFCompanyController.m */; };
+		5DA913741C3CBDBB002C23C2 /* WFDesignController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA9135E1C3CBDBB002C23C2 /* WFDesignController.m */; };
+		5DA913751C3CBDBB002C23C2 /* WFDonotBoredController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA913601C3CBDBB002C23C2 /* WFDonotBoredController.m */; };
+		5DA913761C3CBDBB002C23C2 /* WFFilmController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA913621C3CBDBB002C23C2 /* WFFilmController.m */; };
+		5DA913771C3CBDBB002C23C2 /* WFFinanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA913641C3CBDBB002C23C2 /* WFFinanceController.m */; };
+		5DA913781C3CBDBB002C23C2 /* WFGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA913661C3CBDBB002C23C2 /* WFGameController.m */; };
+		5DA913791C3CBDBB002C23C2 /* WFMusicController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA913681C3CBDBB002C23C2 /* WFMusicController.m */; };
+		5DA9137A1C3CBDBB002C23C2 /* WFNetSecurityController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA9136A1C3CBDBB002C23C2 /* WFNetSecurityController.m */; };
+		5DA9137B1C3CBDBB002C23C2 /* WFPsychicController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA9136C1C3CBDBB002C23C2 /* WFPsychicController.m */; };
+		5DA9137C1C3CBDBB002C23C2 /* WFRecommendController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA9136E1C3CBDBB002C23C2 /* WFRecommendController.m */; };
+		5DA9137D1C3CBDBB002C23C2 /* WFSportController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA913701C3CBDBB002C23C2 /* WFSportController.m */; };
+		5DA913841C3CD325002C23C2 /* WFAutoLoopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA913831C3CD325002C23C2 /* WFAutoLoopView.m */; };
+		5DA913871C3CD33B002C23C2 /* WFBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA913861C3CD33B002C23C2 /* WFBannerView.m */; };
+		5DA9138A1C3CD358002C23C2 /* WFBannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA913891C3CD358002C23C2 /* WFBannerModel.m */; };
+		5DA913AB1C3CDB2B002C23C2 /* WFDetailVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA913AA1C3CDB2B002C23C2 /* WFDetailVM.m */; };
+		5DA913AE1C3CDE3A002C23C2 /* WFDetailHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA913AD1C3CDE3A002C23C2 /* WFDetailHeaderView.m */; };
+		5DA913B41C3CF189002C23C2 /* WFDetailNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA913B31C3CF188002C23C2 /* WFDetailNewsModel.m */; };
+		5DA913B71C3CF628002C23C2 /* WFWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA913B61C3CF628002C23C2 /* WFWebView.m */; };
+		5DA913BA1C3CF832002C23C2 /* WFDetailHeaderLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA913B91C3CF832002C23C2 /* WFDetailHeaderLayout.m */; };
+		5DA913BD1C3D00E0002C23C2 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA913BC1C3D00E0002C23C2 /* UIView+Extension.m */; };
+		5DA913C01C3D0D0A002C23C2 /* Resource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5DA913BF1C3D0D0A002C23C2 /* Resource.bundle */; };
+		5DA913C31C3D0FF5002C23C2 /* WFBottomBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA913C21C3D0FF5002C23C2 /* WFBottomBarView.m */; };
+		5DA913C61C3D14DA002C23C2 /* WFRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA913C51C3D14DA002C23C2 /* WFRefreshView.m */; };
 		5DF6566C1C3B6B9B00D8F8E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF6566B1C3B6B9B00D8F8E0 /* main.m */; };
 		5DF6566F1C3B6B9B00D8F8E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF6566E1C3B6B9B00D8F8E0 /* AppDelegate.m */; };
 		5DF656721C3B6B9B00D8F8E0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF656711C3B6B9B00D8F8E0 /* ViewController.m */; };
@@ -43,8 +68,6 @@
 		5D61D0661C3B9FFF007DF434 /* UINavigationController+XPPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+XPPopGesture.m"; sourceTree = "<group>"; };
 		5D61D06C1C3BA8E7007DF434 /* WFDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFDetailController.h; sourceTree = "<group>"; };
 		5D61D06D1C3BA8E7007DF434 /* WFDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFDetailController.m; sourceTree = "<group>"; };
-		5D61D0701C3BA905007DF434 /* WFCommonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFCommonController.h; sourceTree = "<group>"; };
-		5D61D0711C3BA905007DF434 /* WFCommonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFCommonController.m; sourceTree = "<group>"; };
 		5D61D0741C3BA921007DF434 /* WFHomePageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFHomePageController.h; sourceTree = "<group>"; };
 		5D61D0751C3BA921007DF434 /* WFHomePageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFHomePageController.m; sourceTree = "<group>"; };
 		5D61D0781C3BA93A007DF434 /* WFSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFSettingController.h; sourceTree = "<group>"; };
@@ -70,6 +93,57 @@
 		5D6EA2901C3BC5B400C9462E /* WFSingelNewsLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFSingelNewsLayout.m; sourceTree = "<group>"; };
 		5D6EA2921C3BC66900C9462E /* UIImageView+WFImg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WFImg.h"; sourceTree = "<group>"; };
 		5D6EA2931C3BC66900C9462E /* UIImageView+WFImg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WFImg.m"; sourceTree = "<group>"; };
+		5DA913521C3CBDA5002C23C2 /* WFCommonVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFCommonVM.h; sourceTree = "<group>"; };
+		5DA913531C3CBDA5002C23C2 /* WFCommonVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFCommonVM.m; sourceTree = "<group>"; };
+		5DA913561C3CBDBB002C23C2 /* WFCommonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFCommonController.h; sourceTree = "<group>"; };
+		5DA913571C3CBDBB002C23C2 /* WFCommonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFCommonController.m; sourceTree = "<group>"; };
+		5DA913591C3CBDBB002C23C2 /* WFCartoonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFCartoonController.h; sourceTree = "<group>"; };
+		5DA9135A1C3CBDBB002C23C2 /* WFCartoonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFCartoonController.m; sourceTree = "<group>"; };
+		5DA9135B1C3CBDBB002C23C2 /* WFCompanyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFCompanyController.h; sourceTree = "<group>"; };
+		5DA9135C1C3CBDBB002C23C2 /* WFCompanyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFCompanyController.m; sourceTree = "<group>"; };
+		5DA9135D1C3CBDBB002C23C2 /* WFDesignController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFDesignController.h; sourceTree = "<group>"; };
+		5DA9135E1C3CBDBB002C23C2 /* WFDesignController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFDesignController.m; sourceTree = "<group>"; };
+		5DA9135F1C3CBDBB002C23C2 /* WFDonotBoredController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFDonotBoredController.h; sourceTree = "<group>"; };
+		5DA913601C3CBDBB002C23C2 /* WFDonotBoredController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFDonotBoredController.m; sourceTree = "<group>"; };
+		5DA913611C3CBDBB002C23C2 /* WFFilmController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFFilmController.h; sourceTree = "<group>"; };
+		5DA913621C3CBDBB002C23C2 /* WFFilmController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFFilmController.m; sourceTree = "<group>"; };
+		5DA913631C3CBDBB002C23C2 /* WFFinanceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFFinanceController.h; sourceTree = "<group>"; };
+		5DA913641C3CBDBB002C23C2 /* WFFinanceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFFinanceController.m; sourceTree = "<group>"; };
+		5DA913651C3CBDBB002C23C2 /* WFGameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFGameController.h; sourceTree = "<group>"; };
+		5DA913661C3CBDBB002C23C2 /* WFGameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFGameController.m; sourceTree = "<group>"; };
+		5DA913671C3CBDBB002C23C2 /* WFMusicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFMusicController.h; sourceTree = "<group>"; };
+		5DA913681C3CBDBB002C23C2 /* WFMusicController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFMusicController.m; sourceTree = "<group>"; };
+		5DA913691C3CBDBB002C23C2 /* WFNetSecurityController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFNetSecurityController.h; sourceTree = "<group>"; };
+		5DA9136A1C3CBDBB002C23C2 /* WFNetSecurityController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFNetSecurityController.m; sourceTree = "<group>"; };
+		5DA9136B1C3CBDBB002C23C2 /* WFPsychicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFPsychicController.h; sourceTree = "<group>"; };
+		5DA9136C1C3CBDBB002C23C2 /* WFPsychicController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFPsychicController.m; sourceTree = "<group>"; };
+		5DA9136D1C3CBDBB002C23C2 /* WFRecommendController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFRecommendController.h; sourceTree = "<group>"; };
+		5DA9136E1C3CBDBB002C23C2 /* WFRecommendController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFRecommendController.m; sourceTree = "<group>"; };
+		5DA9136F1C3CBDBB002C23C2 /* WFSportController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFSportController.h; sourceTree = "<group>"; };
+		5DA913701C3CBDBB002C23C2 /* WFSportController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFSportController.m; sourceTree = "<group>"; };
+		5DA913821C3CD325002C23C2 /* WFAutoLoopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFAutoLoopView.h; sourceTree = "<group>"; };
+		5DA913831C3CD325002C23C2 /* WFAutoLoopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFAutoLoopView.m; sourceTree = "<group>"; };
+		5DA913851C3CD33B002C23C2 /* WFBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFBannerView.h; sourceTree = "<group>"; };
+		5DA913861C3CD33B002C23C2 /* WFBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFBannerView.m; sourceTree = "<group>"; };
+		5DA913881C3CD358002C23C2 /* WFBannerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFBannerModel.h; sourceTree = "<group>"; };
+		5DA913891C3CD358002C23C2 /* WFBannerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFBannerModel.m; sourceTree = "<group>"; };
+		5DA913A91C3CDB2B002C23C2 /* WFDetailVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFDetailVM.h; sourceTree = "<group>"; };
+		5DA913AA1C3CDB2B002C23C2 /* WFDetailVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFDetailVM.m; sourceTree = "<group>"; };
+		5DA913AC1C3CDE3A002C23C2 /* WFDetailHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFDetailHeaderView.h; sourceTree = "<group>"; };
+		5DA913AD1C3CDE3A002C23C2 /* WFDetailHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFDetailHeaderView.m; sourceTree = "<group>"; };
+		5DA913B21C3CF188002C23C2 /* WFDetailNewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFDetailNewsModel.h; sourceTree = "<group>"; };
+		5DA913B31C3CF188002C23C2 /* WFDetailNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFDetailNewsModel.m; sourceTree = "<group>"; };
+		5DA913B51C3CF628002C23C2 /* WFWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFWebView.h; sourceTree = "<group>"; };
+		5DA913B61C3CF628002C23C2 /* WFWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFWebView.m; sourceTree = "<group>"; };
+		5DA913B81C3CF832002C23C2 /* WFDetailHeaderLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFDetailHeaderLayout.h; sourceTree = "<group>"; };
+		5DA913B91C3CF832002C23C2 /* WFDetailHeaderLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFDetailHeaderLayout.m; sourceTree = "<group>"; };
+		5DA913BB1C3D00E0002C23C2 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		5DA913BC1C3D00E0002C23C2 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		5DA913BF1C3D0D0A002C23C2 /* Resource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Resource.bundle; sourceTree = "<group>"; };
+		5DA913C11C3D0FF5002C23C2 /* WFBottomBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFBottomBarView.h; sourceTree = "<group>"; };
+		5DA913C21C3D0FF5002C23C2 /* WFBottomBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFBottomBarView.m; sourceTree = "<group>"; };
+		5DA913C41C3D14DA002C23C2 /* WFRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFRefreshView.h; sourceTree = "<group>"; };
+		5DA913C51C3D14DA002C23C2 /* WFRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFRefreshView.m; sourceTree = "<group>"; };
 		5DF656671C3B6B9B00D8F8E0 /* WFZhihuDaily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WFZhihuDaily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DF6566B1C3B6B9B00D8F8E0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5DF6566D1C3B6B9B00D8F8E0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -112,6 +186,9 @@
 		5D61D0601C3B92BC007DF434 /* DetailController */ = {
 			isa = PBXGroup;
 			children = (
+				5DA913A61C3CDB1E002C23C2 /* model */,
+				5DA913A71C3CDB1E002C23C2 /* view */,
+				5DA913A81C3CDB1E002C23C2 /* viewModel */,
 				5D61D06B1C3BA8E7007DF434 /* viewController */,
 			);
 			path = DetailController;
@@ -124,6 +201,8 @@
 				5D61D0661C3B9FFF007DF434 /* UINavigationController+XPPopGesture.m */,
 				5D6EA2921C3BC66900C9462E /* UIImageView+WFImg.h */,
 				5D6EA2931C3BC66900C9462E /* UIImageView+WFImg.m */,
+				5DA913BB1C3D00E0002C23C2 /* UIView+Extension.h */,
+				5DA913BC1C3D00E0002C23C2 /* UIView+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -133,15 +212,6 @@
 			children = (
 				5D61D06C1C3BA8E7007DF434 /* WFDetailController.h */,
 				5D61D06D1C3BA8E7007DF434 /* WFDetailController.m */,
-			);
-			path = viewController;
-			sourceTree = "<group>";
-		};
-		5D61D06F1C3BA905007DF434 /* viewController */ = {
-			isa = PBXGroup;
-			children = (
-				5D61D0701C3BA905007DF434 /* WFCommonController.h */,
-				5D61D0711C3BA905007DF434 /* WFCommonController.m */,
 			);
 			path = viewController;
 			sourceTree = "<group>";
@@ -194,6 +264,8 @@
 				5D6EA2901C3BC5B400C9462E /* WFSingelNewsLayout.m */,
 				5D61D0911C3BB095007DF434 /* WFLatestNewsModel.h */,
 				5D61D0921C3BB095007DF434 /* WFLatestNewsModel.m */,
+				5DA913881C3CD358002C23C2 /* WFBannerModel.h */,
+				5DA913891C3CD358002C23C2 /* WFBannerModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -203,6 +275,12 @@
 			children = (
 				5D6EA28C1C3BC1AC00C9462E /* WFMainViewCell.h */,
 				5D6EA28D1C3BC1AC00C9462E /* WFMainViewCell.m */,
+				5DA913821C3CD325002C23C2 /* WFAutoLoopView.h */,
+				5DA913831C3CD325002C23C2 /* WFAutoLoopView.m */,
+				5DA913851C3CD33B002C23C2 /* WFBannerView.h */,
+				5DA913861C3CD33B002C23C2 /* WFBannerView.m */,
+				5DA913C41C3D14DA002C23C2 /* WFRefreshView.h */,
+				5DA913C51C3D14DA002C23C2 /* WFRefreshView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -214,6 +292,110 @@
 				5D61D08C1C3BAF76007DF434 /* WFHomePageVM.m */,
 			);
 			path = viewModel;
+			sourceTree = "<group>";
+		};
+		5DA9134F1C3CBD8E002C23C2 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		5DA913501C3CBD8E002C23C2 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		5DA913511C3CBD8E002C23C2 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5DA913521C3CBDA5002C23C2 /* WFCommonVM.h */,
+				5DA913531C3CBDA5002C23C2 /* WFCommonVM.m */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		5DA913551C3CBDBB002C23C2 /* baseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5DA913561C3CBDBB002C23C2 /* WFCommonController.h */,
+				5DA913571C3CBDBB002C23C2 /* WFCommonController.m */,
+			);
+			path = baseViewController;
+			sourceTree = "<group>";
+		};
+		5DA913581C3CBDBB002C23C2 /* viewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5DA913591C3CBDBB002C23C2 /* WFCartoonController.h */,
+				5DA9135A1C3CBDBB002C23C2 /* WFCartoonController.m */,
+				5DA9135B1C3CBDBB002C23C2 /* WFCompanyController.h */,
+				5DA9135C1C3CBDBB002C23C2 /* WFCompanyController.m */,
+				5DA9135D1C3CBDBB002C23C2 /* WFDesignController.h */,
+				5DA9135E1C3CBDBB002C23C2 /* WFDesignController.m */,
+				5DA9135F1C3CBDBB002C23C2 /* WFDonotBoredController.h */,
+				5DA913601C3CBDBB002C23C2 /* WFDonotBoredController.m */,
+				5DA913611C3CBDBB002C23C2 /* WFFilmController.h */,
+				5DA913621C3CBDBB002C23C2 /* WFFilmController.m */,
+				5DA913631C3CBDBB002C23C2 /* WFFinanceController.h */,
+				5DA913641C3CBDBB002C23C2 /* WFFinanceController.m */,
+				5DA913651C3CBDBB002C23C2 /* WFGameController.h */,
+				5DA913661C3CBDBB002C23C2 /* WFGameController.m */,
+				5DA913671C3CBDBB002C23C2 /* WFMusicController.h */,
+				5DA913681C3CBDBB002C23C2 /* WFMusicController.m */,
+				5DA913691C3CBDBB002C23C2 /* WFNetSecurityController.h */,
+				5DA9136A1C3CBDBB002C23C2 /* WFNetSecurityController.m */,
+				5DA9136B1C3CBDBB002C23C2 /* WFPsychicController.h */,
+				5DA9136C1C3CBDBB002C23C2 /* WFPsychicController.m */,
+				5DA9136D1C3CBDBB002C23C2 /* WFRecommendController.h */,
+				5DA9136E1C3CBDBB002C23C2 /* WFRecommendController.m */,
+				5DA9136F1C3CBDBB002C23C2 /* WFSportController.h */,
+				5DA913701C3CBDBB002C23C2 /* WFSportController.m */,
+			);
+			path = viewControllers;
+			sourceTree = "<group>";
+		};
+		5DA913A61C3CDB1E002C23C2 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				5DA913B21C3CF188002C23C2 /* WFDetailNewsModel.h */,
+				5DA913B31C3CF188002C23C2 /* WFDetailNewsModel.m */,
+				5DA913B81C3CF832002C23C2 /* WFDetailHeaderLayout.h */,
+				5DA913B91C3CF832002C23C2 /* WFDetailHeaderLayout.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		5DA913A71C3CDB1E002C23C2 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				5DA913AC1C3CDE3A002C23C2 /* WFDetailHeaderView.h */,
+				5DA913AD1C3CDE3A002C23C2 /* WFDetailHeaderView.m */,
+				5DA913B51C3CF628002C23C2 /* WFWebView.h */,
+				5DA913B61C3CF628002C23C2 /* WFWebView.m */,
+				5DA913C11C3D0FF5002C23C2 /* WFBottomBarView.h */,
+				5DA913C21C3D0FF5002C23C2 /* WFBottomBarView.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		5DA913A81C3CDB1E002C23C2 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5DA913A91C3CDB2B002C23C2 /* WFDetailVM.h */,
+				5DA913AA1C3CDB2B002C23C2 /* WFDetailVM.m */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		5DA913BE1C3D0D0A002C23C2 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				5DA913BF1C3D0D0A002C23C2 /* Resource.bundle */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		5DF6565E1C3B6B9B00D8F8E0 = {
@@ -241,14 +423,15 @@
 				5DF6566E1C3B6B9B00D8F8E0 /* AppDelegate.m */,
 				5DF656701C3B6B9B00D8F8E0 /* ViewController.h */,
 				5DF656711C3B6B9B00D8F8E0 /* ViewController.m */,
+				5DA913BE1C3D0D0A002C23C2 /* Resource */,
+				5DF656921C3B6CC100D8F8E0 /* SettingController */,
+				5DF6568F1C3B6CC100D8F8E0 /* HomePageController */,
+				5DF6568C1C3B6CC100D8F8E0 /* CommonController */,
+				5DF656851C3B6CC100D8F8E0 /* BaseViewController */,
+				5D61D0601C3B92BC007DF434 /* DetailController */,
 				D288D4621C3C1DA60034B742 /* LeftDrawerController */,
 				5D61D07B1C3BA9D8007DF434 /* Manager */,
 				5D61D0641C3B9FFF007DF434 /* Category */,
-				5D61D0601C3B92BC007DF434 /* DetailController */,
-				5DF656851C3B6CC100D8F8E0 /* BaseViewController */,
-				5DF6568C1C3B6CC100D8F8E0 /* CommonController */,
-				5DF6568F1C3B6CC100D8F8E0 /* HomePageController */,
-				5DF656921C3B6CC100D8F8E0 /* SettingController */,
 				5DF656821C3B6C8F00D8F8E0 /* Constants */,
 				5DF656731C3B6B9B00D8F8E0 /* Main.storyboard */,
 				5DF656761C3B6B9B00D8F8E0 /* Assets.xcassets */,
@@ -293,7 +476,11 @@
 		5DF6568C1C3B6CC100D8F8E0 /* CommonController */ = {
 			isa = PBXGroup;
 			children = (
-				5D61D06F1C3BA905007DF434 /* viewController */,
+				5DA913551C3CBDBB002C23C2 /* baseViewController */,
+				5DA913581C3CBDBB002C23C2 /* viewControllers */,
+				5DA9134F1C3CBD8E002C23C2 /* model */,
+				5DA913501C3CBD8E002C23C2 /* view */,
+				5DA913511C3CBD8E002C23C2 /* viewModel */,
 			);
 			path = CommonController;
 			sourceTree = "<group>";
@@ -442,6 +629,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DA913C01C3D0D0A002C23C2 /* Resource.bundle in Resources */,
 				5DF656771C3B6B9B00D8F8E0 /* Assets.xcassets in Resources */,
 				5DF656751C3B6B9B00D8F8E0 /* Main.storyboard in Resources */,
 			);
@@ -502,29 +690,53 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DA913771C3CBDBB002C23C2 /* WFFinanceController.m in Sources */,
 				5DF656721C3B6B9B00D8F8E0 /* ViewController.m in Sources */,
+				5DA913721C3CBDBB002C23C2 /* WFCartoonController.m in Sources */,
+				5DA913C31C3D0FF5002C23C2 /* WFBottomBarView.m in Sources */,
+				5DA9137D1C3CBDBB002C23C2 /* WFSportController.m in Sources */,
+				5DA913B71C3CF628002C23C2 /* WFWebView.m in Sources */,
+				5DA913761C3CBDBB002C23C2 /* WFFilmController.m in Sources */,
 				5D61D0841C3BAA1D007DF434 /* WFHttpMgr.m in Sources */,
+				5DA913751C3CBDBB002C23C2 /* WFDonotBoredController.m in Sources */,
 				D288D4691C3C1DE00034B742 /* WFLeftController.m in Sources */,
+				5DA913711C3CBDBB002C23C2 /* WFCommonController.m in Sources */,
+				5DA9137B1C3CBDBB002C23C2 /* WFPsychicController.m in Sources */,
+				5DA913781C3CBDBB002C23C2 /* WFGameController.m in Sources */,
 				5DF656971C3B6CC100D8F8E0 /* WFMainController.m in Sources */,
+				5DA913791C3CBDBB002C23C2 /* WFMusicController.m in Sources */,
+				5DA913541C3CBDA5002C23C2 /* WFCommonVM.m in Sources */,
+				5DA9137C1C3CBDBB002C23C2 /* WFRecommendController.m in Sources */,
 				5D61D0851C3BAA1D007DF434 /* WFManager+MainViewInfo.m in Sources */,
+				5DA913B41C3CF189002C23C2 /* WFDetailNewsModel.m in Sources */,
+				5DA913AB1C3CDB2B002C23C2 /* WFDetailVM.m in Sources */,
 				D288D46C1C3C1E050034B742 /* WFLeftCell.m in Sources */,
+				5DA913BA1C3CF832002C23C2 /* WFDetailHeaderLayout.m in Sources */,
 				5D61D0931C3BB095007DF434 /* WFLatestNewsModel.m in Sources */,
 				5D6EA28E1C3BC1AC00C9462E /* WFMainViewCell.m in Sources */,
 				D288D4721C3C23790034B742 /* WFLeftVM.m in Sources */,
 				5D61D0671C3B9FFF007DF434 /* UINavigationController+XPPopGesture.m in Sources */,
 				D288D46F1C3C228C0034B742 /* WFLeftDataModel.m in Sources */,
+				5DA9138A1C3CD358002C23C2 /* WFBannerModel.m in Sources */,
 				5D61D07A1C3BA93A007DF434 /* WFSettingController.m in Sources */,
 				5D61D0761C3BA921007DF434 /* WFHomePageController.m in Sources */,
-				5D61D0721C3BA905007DF434 /* WFCommonController.m in Sources */,
 				5D61D08D1C3BAF76007DF434 /* WFHomePageVM.m in Sources */,
 				5DF656951C3B6CC100D8F8E0 /* WFBaseController.m in Sources */,
 				5D6EA2911C3BC5B400C9462E /* WFSingelNewsLayout.m in Sources */,
+				5DA913C61C3D14DA002C23C2 /* WFRefreshView.m in Sources */,
+				5DA9137A1C3CBDBB002C23C2 /* WFNetSecurityController.m in Sources */,
 				5D61D0901C3BB07C007DF434 /* WFSingelNewsModel.m in Sources */,
 				5DF6566F1C3B6B9B00D8F8E0 /* AppDelegate.m in Sources */,
 				5D61D06E1C3BA8E7007DF434 /* WFDetailController.m in Sources */,
+				5DA913AE1C3CDE3A002C23C2 /* WFDetailHeaderView.m in Sources */,
 				5D61D0861C3BAA1D007DF434 /* WFManager.m in Sources */,
 				5D6EA2941C3BC66900C9462E /* UIImageView+WFImg.m in Sources */,
+				5DA913871C3CD33B002C23C2 /* WFBannerView.m in Sources */,
 				5DF6566C1C3B6B9B00D8F8E0 /* main.m in Sources */,
+				5DA913731C3CBDBB002C23C2 /* WFCompanyController.m in Sources */,
+				5DA913BD1C3D00E0002C23C2 /* UIView+Extension.m in Sources */,
+				5DA913741C3CBDBB002C23C2 /* WFDesignController.m in Sources */,
+				5DA913841C3CD325002C23C2 /* WFAutoLoopView.m in Sources */,
 				5D61D0961C3BB288007DF434 /* WFToolKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

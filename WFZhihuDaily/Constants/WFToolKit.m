@@ -22,3 +22,12 @@ void setExtraCellLineHidden(UITableView *tableView){
     [tableView setTableFooterView:view];
     [tableView setTableHeaderView:view];
 }
+
+#pragma mark resource Control
+//bundle图片加载
+extern UIImage* Image(NSString* imageName)
+{
+    NSString *bundleStr = @"Resource.bundle/";
+    NSString *imgPath   = [bundleStr stringByAppendingString:imageName];
+    return [UIImage imageNamed:imgPath];
+}

@@ -8,23 +8,19 @@
 
 #import "WFManager.h"
 #import "WFLatestNewsModel.h"
-
+#import "WFDetailNewsModel.h"
 
 typedef void(^GetMainViewInfoSuccessBlock)(WFLatestNewsModel *);
-
+typedef void(^GetNewsDetailSuccessBlock)(WFDetailNewsModel *);
 
 @interface WFManager (MainViewInfo)
 
 + (void)wf_getMainViewNewsWithField:(NSString *)fieldTxt
                             success:(GetMainViewInfoSuccessBlock)success
                             failure:(wf_reqFailureBlock)failure;
-//
-//+ (void)wf_getNewsDetailWithID:(NSString *)newsId
-//                      success:(GetNewsDetailSuccessBlock)success
-//                      failure:(yy_reqFailureBlock)failure;
-//
-//+ (void)yy_getPreviousNewsWithDate:(NSString *)dateStr
-//                           success:(GetMainViewInfoSuccessBlock)success
-//                           failure:(yy_reqFailureBlock)failure;
+
++ (void)wf_getNewsDetailWithID:(NSString *)newsId
+                      success:(GetNewsDetailSuccessBlock)success
+                      failure:(wf_reqFailureBlock)failure;
 
 @end

@@ -13,6 +13,20 @@
 #import "WFCommonController.h"
 #import "WFHomePageVM.h"
 #import "WFLeftVM.h"
+#import "WFCommonVM.h"
+
+#import "WFCartoonController.h"
+#import "WFCompanyController.h"
+#import "WFDesignController.h"
+#import "WFDonotBoredController.h"
+#import "WFFilmController.h"
+#import "WFFinanceController.h"
+#import "WFGameController.h"
+#import "WFMusicController.h"
+#import "WFNetSecurityController.h"
+#import "WFPsychicController.h"
+#import "WFRecommendController.h"
+#import "WFSportController.h"
 
 @interface AppDelegate ()
 
@@ -23,16 +37,48 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    UINavigationController *homePageNav = [[UINavigationController alloc] initWithRootViewController:[[WFHomePageController alloc] initWithViewModel:[WFHomePageVM new]]];
-    
-    NSMutableArray *controllers = [NSMutableArray arrayWithObjects:homePageNav,[[WFCommonController alloc] init], nil];
-    
-    WFMainController *mainController = [[WFMainController alloc] initWithLeftController:[[WFLeftController alloc] initWithViewModel:[WFLeftVM new]] andControllers:controllers];
+    WFMainController *mainController = [[WFMainController alloc] initWithLeftController:[[WFLeftController alloc] initWithViewModel:[WFLeftVM new]] andControllers:[self configControllers]];
     self.window.rootViewController = mainController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
     return YES;
+
+}
+
+//有点sb？
+- (NSMutableArray *)configControllers{
+    
+    UINavigationController *homePageNav = [[UINavigationController alloc] initWithRootViewController:[[WFHomePageController alloc] initWithViewModel:[WFHomePageVM new]]];
+    
+    UINavigationController *cartoonNav = [[UINavigationController alloc] initWithRootViewController:[[WFCartoonController alloc] initWithViewModel:[WFCommonVM new]]];
+    
+    UINavigationController *psychicNav = [[UINavigationController alloc] initWithRootViewController:[[WFPsychicController alloc] initWithViewModel:[WFCommonVM new]]];
+
+    UINavigationController *recommendNav = [[UINavigationController alloc] initWithRootViewController:[[WFRecommendController alloc] initWithViewModel:[WFCommonVM new]]];
+
+    UINavigationController *filmNav = [[UINavigationController alloc] initWithRootViewController:[[WFFilmController alloc] initWithViewModel:[WFCommonVM new]]];
+
+    UINavigationController *donotBoredNav = [[UINavigationController alloc] initWithRootViewController:[[WFDonotBoredController alloc] initWithViewModel:[WFCommonVM new]]];
+
+    UINavigationController *designNav = [[UINavigationController alloc] initWithRootViewController:[[WFDesignController alloc] initWithViewModel:[WFCommonVM new]]];
+    
+    UINavigationController *companyNav = [[UINavigationController alloc] initWithRootViewController:[[WFCompanyController alloc] initWithViewModel:[WFCommonVM new]]];
+    
+    UINavigationController *financeNav = [[UINavigationController alloc] initWithRootViewController:[[WFFinanceController alloc] initWithViewModel:[WFCommonVM new]]];
+    
+    UINavigationController *netSecurityNav = [[UINavigationController alloc] initWithRootViewController:[[WFNetSecurityController alloc] initWithViewModel:[WFCommonVM new]]];
+    
+    UINavigationController *gameNav = [[UINavigationController alloc] initWithRootViewController:[[WFGameController alloc] initWithViewModel:[WFCommonVM new]]];
+    
+    UINavigationController *musicNav = [[UINavigationController alloc] initWithRootViewController:[[WFMusicController alloc] initWithViewModel:[WFCommonVM new]]];
+    
+    UINavigationController *sportNav = [[UINavigationController alloc] initWithRootViewController:[[WFSportController alloc] initWithViewModel:[WFCommonVM new]]];
+    
+    
+    NSMutableArray *controllers = [NSMutableArray arrayWithObjects:homePageNav,cartoonNav,psychicNav,recommendNav,filmNav,donotBoredNav,designNav,companyNav,financeNav,netSecurityNav,gameNav,musicNav,sportNav, nil];
+    
+    return controllers;
 
 }
 

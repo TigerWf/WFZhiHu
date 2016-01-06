@@ -78,9 +78,9 @@
     _leftController.drawerAction = ^(NSString *className){//左抽屉tableview点击事件
     
        
-        for (WFBaseController *vc in weakSelf.controllers) {
+        for (UIViewController *vc in weakSelf.controllers) {
             
-            if ([NSStringFromClass([vc class]) isEqualToString:className]) {
+            if ([vc.classMark isEqualToString:className]) {
                 
                 vc.showFlag = YES;
                 
@@ -129,10 +129,11 @@
     
     [self hideDrawerList];//隐藏左抽屉
     
-    for (WFBaseController *vc in _controllers) {
+    for (UIViewController *vc in _controllers) {
+      
         if (vc.showFlag == YES) {//有主动标记为最上
-            
-            _markLevelVc = NSStringFromClass([vc class]);
+    
+            _markLevelVc =vc.classMark;
             k ++;
             
             [_containerController addChildViewController:vc];
@@ -150,10 +151,10 @@
 
     if (k == 0) {//没标记最上  用数组第一个放最上
         
-        WFBaseController *vc = [_controllers firstObject];
+        UIViewController *vc = [_controllers firstObject];
         [_containerController addChildViewController:vc];
         [_containerController.view addSubview:vc.view];
-        _markLevelVc = NSStringFromClass([vc class]);
+        _markLevelVc = vc.classMark;
         
         vc.view.alpha = 0.f;
         [UIView animateWithDuration:0.4f animations:^{
@@ -169,7 +170,7 @@
 #pragma mark - 手势相关
 
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
-    
+ 
     if ([gestureRecognizer isKindOfClass:[UIPanGestureRecognizer class]]){
       
         CGPoint translation = [(UIPanGestureRecognizer *)gestureRecognizer translationInView:self.view];
@@ -184,6 +185,11 @@
     if ([otherGestureRecognizer isKindOfClass:[XPPanGestureRecognizer class]]) {
         return NO;
     }
+    
+    if ([otherGestureRecognizer.view isKindOfClass:[UIScrollView class]]) {
+        return NO;
+    }
+    
     return YES;
 }
 #pragma mark - 平移手势

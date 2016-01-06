@@ -7,13 +7,14 @@
 //
 
 #import "WFBaseController.h"
+#import "WFRefreshView.h"
 
 @interface WFBaseController ()<UITableViewDataSource,UITableViewDelegate>
 {
     UILabel *_navigationLabel;
     
 }
-
+@property (nonatomic, strong)WFRefreshView *refreshView;
 
 @end
 
@@ -58,21 +59,59 @@
     _navigationLabel.textColor = [UIColor whiteColor];
     _navigationLabel.backgroundColor = [UIColor clearColor];
     [self.view addSubview:_navigationLabel];
-  
     
 }
 
 
 - (void)configListView{
 
-    _mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(0.f, 20.f, kScreenWidth, kScreenHeight-20.f)];
-    _mainTableView.rowHeight = 88;
+    _mainTableView = [[UITableView alloc] initWithFrame:CGRectMake(0.f, 0.f, kScreenWidth, kScreenHeight)];
+    _mainTableView.rowHeight = 80;
     _mainTableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0.f, 0.f, kScreenWidth, 200.f)];
     [self.view addSubview:_mainTableView];
+    
+    _refreshView = [[WFRefreshView alloc] initWithFrame:CGRectMake(100, 24, 20.f, 20.f)];
+    [self.view addSubview:_refreshView];
 
 }
 
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    if ([scrollView isEqual:self.mainTableView]){
+        CGFloat offSetY = scrollView.contentOffset.y;
+        
+        if (offSetY <= 0 && offSetY >= -80) {
+            if (-offSetY <= 60) {
+                if (!_isLoading) {
+                    [_refreshView redrawFromProgress:-offSetY/60];
+                }else{
+                    [_refreshView redrawFromProgress:0];
+                }
+            }
+           
+            if(!_isLoading && !scrollView.isDragging && -offSetY>60 && -offSetY<=80){
+                
+                [_refreshView redrawFromProgress:0];
+                [_refreshView startAnimation];
+                [self requestNewData];
+              
+            }
+            
+            
+        }else if(offSetY <- 80){
+            
+        }else if(offSetY <= 300) {
+            
+            [_refreshView redrawFromProgress:0];
+        }
+    }
+}
+
+- (void)requestNewData{
+
+    _isLoading = YES;
+
+}
 
 #pragma mark - Setter
 - (void)setNavigationTitle:(NSString *)navigationTitle{

@@ -6,8 +6,12 @@
 //  Copyright © 2016年 xiupintech. All rights reserved.
 //
 
-#import "WFBaseController.h"
 
-@interface WFDetailController : WFBaseController
+#import <UIKit/UIKit.h>
+#import "WFDetailVM.h"
+
+@interface WFDetailController : UIViewController<UIScrollViewDelegate>
+
+- (instancetype)initWithViewModel:(WFDetailVM *)viewModel;
 
 @end

@@ -7,7 +7,12 @@
 //
 
 #import "WFBaseController.h"
+#import "WFCommonVM.h"
 
 @interface WFCommonController : WFBaseController
+
+@property(strong,nonatomic) WFCommonVM *viewModel;
+
+- (instancetype)initWithViewModel:(WFCommonVM *)viewModel;
 
 @end

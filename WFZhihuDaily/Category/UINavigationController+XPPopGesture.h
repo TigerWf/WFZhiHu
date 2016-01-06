@@ -29,8 +29,6 @@
 
 @property (nonatomic, assign) BOOL xp_viewControllerBasedNavigationBarAppearanceEnabled;
 
-@property (nonatomic, assign) BOOL showFlag;//显示在最上面的viewcontroller 缺省为no
-
 @end
 
 
@@ -44,6 +42,12 @@
  */
 @property (nonatomic, assign) BOOL xp_interactivePopDisabled;
 
+@property (nonatomic, assign) BOOL showFlag;//显示在最上面的viewcontroller 缺省为no
+
+/**
+ *  获得控制的名字 如果是导航控制器 则拿其topViewController的名字
+ */
+@property (nonatomic, copy) NSString *classMark;//标记
 
 /**
  *  是否隐藏导航栏  默认为NO 不隐藏

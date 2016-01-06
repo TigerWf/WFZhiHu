@@ -14,10 +14,21 @@
 
 @implementation WFCommonController
 
+- (instancetype)initWithViewModel:(WFCommonVM *)viewModel{
+    
+    if (self == [super init]) {
+        self.viewModel = viewModel;
+    }
+    return self;
+
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor purpleColor];
-    DLog(@"common Controller");
+    self.navigationBar.hidden = YES;
+    self.mainTableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0.f, 0.f, kScreenWidth, 64.f)];
+    self.mainTableView.tableHeaderView.backgroundColor = RGBColor(35, 42, 48, 1.0);
+
     // Do any additional setup after loading the view.
 }
 

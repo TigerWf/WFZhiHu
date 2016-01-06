@@ -16,5 +16,6 @@
 #import "MJExtension.h"
 #import "WFToolKit.h"
 #import "UIImageView+WFImg.h"
+#import "UIView+Extension.h"
 
 #endif /* PrefixHeader_pch */

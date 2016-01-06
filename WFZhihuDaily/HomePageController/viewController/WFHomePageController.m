@@ -9,10 +9,11 @@
 #import "WFHomePageController.h"
 #import "WFDetailController.h"
 #import "WFMainViewCell.h"
+#import "WFAutoLoopView.h"
 
 @interface WFHomePageController ()<UITableViewDelegate,UITableViewDataSource>
 {
-    
+    WFAutoLoopView *_autoLoopView;
 }
 @property(strong,nonatomic) WFHomePageVM *viewModel;
 
@@ -59,8 +60,32 @@ static NSString * const kCellID = @"WFCell";
     self.mainTableView.dataSource = self;
     [self.mainTableView registerClass:[WFMainViewCell class] forCellReuseIdentifier:kCellID];
     [_viewModel requestLatestNewsData:^{
+        [weakSelf addTopView];
         [weakSelf.mainTableView reloadData];
     }];
+}
+
+- (void)addTopView{
+
+    WS(weakSelf);
+    _autoLoopView = [[WFAutoLoopView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 200.f)];
+    _autoLoopView.stretchAnimation = YES;
+    _autoLoopView.banners = [_viewModel getAutoLoopData];;
+    _autoLoopView.clickAutoLoopCallBackBlock = ^(WFBannerModel *bannerModel){
+        
+        WFSingelNewsModel *singleNewsModel= [[WFSingelNewsModel alloc] init];
+        singleNewsModel.newsId = bannerModel.newsId;
+        singleNewsModel.imagesUrl = @[bannerModel.bannerImage];
+        
+        WFDetailVM *detailVM = [[WFDetailVM alloc] init];
+        detailVM.singleNewsModel = singleNewsModel;
+        
+        WFDetailController *detail = [[WFDetailController alloc] initWithViewModel:detailVM];
+        [weakSelf.navigationController pushViewController:detail animated:YES];
+    };
+    
+    [self.mainTableView setTableHeaderView:_autoLoopView];
+
 }
 
 #pragma mark - TableView Delegate -
@@ -81,5 +106,33 @@ static NSString * const kCellID = @"WFCell";
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    WFDetailVM *detailVM = [[WFDetailVM alloc] init];
+    detailVM.singleNewsModel = [[_viewModel singleNewsAtIndexPath:indexPath] singeModel];
+    
+    WFDetailController *detail = [[WFDetailController alloc] initWithViewModel:detailVM];
+    [self.navigationController pushViewController:detail animated:YES];
+    
+}
+
+
+#pragma mark - ScrollView Delegate -
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+
+    [super scrollViewDidScroll:scrollView];
+    if (scrollView == self.mainTableView){
+     
+        [(WFAutoLoopView *)(self.mainTableView.tableHeaderView) wf_parallaxHeaderViewWithOffset:scrollView.contentOffset];
+    }
+
+
+}
+
+- (void)requestNewData{
+    [super requestNewData];
+    DLog(@"requestNewData");
+
+}
 
 @end

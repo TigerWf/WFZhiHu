@@ -318,27 +318,27 @@ typedef void (^XPViewControllerWillAppearInjectBlock)(UIViewController *viewCont
     objc_setAssociatedObject(self, key, @(enabled), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-//add by tiger
-- (BOOL)showFlag{
-    
-    NSNumber *number = objc_getAssociatedObject(self, _cmd);
-    if (number) {
-        return number.boolValue;
-    }
-    self.showFlag = YES;
-    return YES;
-
-}
-
-- (void)setShowFlag:(BOOL)showFlag{
-
-    SEL key = @selector(showFlag);
-    objc_setAssociatedObject(self, key, @(showFlag), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
 
 @end
 
 @implementation UIViewController (XPPopGesture)
+
+- (NSString *)classMark{
+    
+    NSString *mark = objc_getAssociatedObject(self, _cmd);
+    mark = NSStringFromClass([self class]);
+    if ([self isKindOfClass:[UINavigationController class]]) {
+        mark = NSStringFromClass([[(UINavigationController *)self topViewController] class]);
+    }
+    return mark;
+}
+
+- (void)setClassMark:(NSString *)classMark{
+
+    SEL key = @selector(classMark);
+    objc_setAssociatedObject(self, key, classMark, OBJC_ASSOCIATION_COPY_NONATOMIC);
+
+}
 
 - (BOOL)xp_interactivePopDisabled{
     
@@ -375,5 +375,18 @@ typedef void (^XPViewControllerWillAppearInjectBlock)(UIViewController *viewCont
     SEL key = @selector(xp_interactivePopMaxAllowedInitialDistanceToLeftEdge);
     objc_setAssociatedObject(self, key, @(MAX(0, distance)), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
+
+//add by tiger
+- (BOOL)showFlag{
+    
+    return [objc_getAssociatedObject(self, _cmd) boolValue];
+    
+}
+
+- (void)setShowFlag:(BOOL)show{
+    
+   objc_setAssociatedObject(self, @selector(showFlag), @(show), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
 
 @end

@@ -7,10 +7,12 @@
 //
 
 #import "WFHomePageVM.h"
+#import "WFBannerModel.h"
 
 @implementation WFHomePageVM
 {
     NSMutableArray *_listLayoutArr;
+    NSMutableArray *_autoLoopNewsArr;
 }
 - (void)requestLatestNewsData:(getDataFinish)getFinish{
    
@@ -30,6 +32,23 @@
 
             }
         }
+        
+       
+        _autoLoopNewsArr = [[NSMutableArray alloc] init];//顶部循环图的数据
+        
+        for (NSUInteger i=0; i< newsModel.topStoriesArray.count; i++) {
+            
+            @autoreleasepool {
+                
+                WFSingelNewsModel *scrollNewsModel = newsModel.topStoriesArray[i];
+                WFBannerModel *bannerModel = [[WFBannerModel alloc] init];
+                bannerModel.bannerImage = scrollNewsModel.imageUrl;
+                bannerModel.newsId = scrollNewsModel.newsId;
+                [_autoLoopNewsArr addObject:bannerModel];
+            }
+           
+        }
+
         
         getFinish();
         
@@ -53,6 +72,12 @@
 
     WFSingelNewsLayout *singleNewsLayout = _listLayoutArr[indexPath.row];
     return singleNewsLayout;
+
+}
+
+- (NSMutableArray *)getAutoLoopData{
+   
+    return _autoLoopNewsArr;
 
 }
 

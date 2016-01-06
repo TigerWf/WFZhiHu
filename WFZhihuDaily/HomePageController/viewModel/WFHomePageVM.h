@@ -20,4 +20,6 @@ typedef void(^getDataFinish)();
 - (NSUInteger)numberOfRowsInSection:(NSUInteger)section;
 - (WFSingelNewsLayout *)singleNewsAtIndexPath:(NSIndexPath *)indexPath;
 
+- (NSMutableArray *)getAutoLoopData;
+
 @end
