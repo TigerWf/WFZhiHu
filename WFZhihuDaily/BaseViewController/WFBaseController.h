@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WFRefreshView.h"
+
 /**
  *  父视图控制器
  */
@@ -23,6 +25,8 @@
 @property(nonatomic,copy)  NSString *navigationTitle;
 
 @property(strong,nonatomic) UITableView  *mainTableView;
+
+@property (nonatomic, strong)WFRefreshView *refreshView;
 
 - (void)requestNewData;
 

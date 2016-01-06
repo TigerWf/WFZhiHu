@@ -54,7 +54,7 @@ static NSString * const kCellID = @"WFCell";
 - (void)configUI{
   
     WS(weakSelf);
-    self.navigationTitle = @"今日热闻";
+  
     self.navigationBar.alpha = 0.f;
     self.mainTableView.delegate = self;
     self.mainTableView.dataSource = self;
@@ -123,6 +123,10 @@ static NSString * const kCellID = @"WFCell";
     [super scrollViewDidScroll:scrollView];
     if (scrollView == self.mainTableView){
      
+        CGFloat offSetY = scrollView.contentOffset.y;
+        float h = offSetY / 200;
+        self.navigationBar.alpha = (h > 1)?1:h;
+    
         [(WFAutoLoopView *)(self.mainTableView.tableHeaderView) wf_parallaxHeaderViewWithOffset:scrollView.contentOffset];
     }
 
@@ -132,6 +136,7 @@ static NSString * const kCellID = @"WFCell";
 - (void)requestNewData{
     [super requestNewData];
     DLog(@"requestNewData");
+    DELAYEXECUTE(3.0f, self.isLoading = NO;[self.refreshView stopAnimation];);
 
 }
 

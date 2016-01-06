@@ -10,6 +10,7 @@
 #import "WFDetailHeaderView.h"
 #import "WFWebView.h"
 #import "WFBottomBarView.h"
+#import "WFLoadingView.h"
 
 @interface WFDetailController ()<WFBottomBarDelegate>
 {
@@ -18,6 +19,7 @@
     WFBottomBarView *_detailBottomView;
 }
 @property(strong,nonatomic) WFDetailVM *viewModel;
+@property (nonatomic,strong) WFLoadingView *loadingView;//加载视图
 
 @end
 
@@ -42,9 +44,11 @@
     [self configUI];
     [_viewModel requestWebViewData:^{
         [weakSelf refreshUI];
+        [_loadingView dismissLoadingView];
+        _loadingView = nil;
     }];
     
-
+    [self.view addSubview:self.loadingView];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -129,4 +133,14 @@
     }
 }
 
+
+#pragma mark - Getter
+- (WFLoadingView *)loadingView{
+    
+    if (!_loadingView) {
+        _loadingView = [[WFLoadingView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
+    }
+    
+    return _loadingView;
+}
 @end

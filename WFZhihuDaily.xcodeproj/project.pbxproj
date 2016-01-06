@@ -47,6 +47,8 @@
 		5DA913C01C3D0D0A002C23C2 /* Resource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5DA913BF1C3D0D0A002C23C2 /* Resource.bundle */; };
 		5DA913C31C3D0FF5002C23C2 /* WFBottomBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA913C21C3D0FF5002C23C2 /* WFBottomBarView.m */; };
 		5DA913C61C3D14DA002C23C2 /* WFRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA913C51C3D14DA002C23C2 /* WFRefreshView.m */; };
+		5DA913C91C3D19AF002C23C2 /* WFLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA913C81C3D19AF002C23C2 /* WFLoadingView.m */; };
+		5DA913CB1C3D19F4002C23C2 /* LoadingAnimation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5DA913CA1C3D19F4002C23C2 /* LoadingAnimation.gif */; };
 		5DF6566C1C3B6B9B00D8F8E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF6566B1C3B6B9B00D8F8E0 /* main.m */; };
 		5DF6566F1C3B6B9B00D8F8E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF6566E1C3B6B9B00D8F8E0 /* AppDelegate.m */; };
 		5DF656721C3B6B9B00D8F8E0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF656711C3B6B9B00D8F8E0 /* ViewController.m */; };
@@ -144,6 +146,9 @@
 		5DA913C21C3D0FF5002C23C2 /* WFBottomBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFBottomBarView.m; sourceTree = "<group>"; };
 		5DA913C41C3D14DA002C23C2 /* WFRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFRefreshView.h; sourceTree = "<group>"; };
 		5DA913C51C3D14DA002C23C2 /* WFRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFRefreshView.m; sourceTree = "<group>"; };
+		5DA913C71C3D19AF002C23C2 /* WFLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFLoadingView.h; sourceTree = "<group>"; };
+		5DA913C81C3D19AF002C23C2 /* WFLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFLoadingView.m; sourceTree = "<group>"; };
+		5DA913CA1C3D19F4002C23C2 /* LoadingAnimation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = LoadingAnimation.gif; sourceTree = "<group>"; };
 		5DF656671C3B6B9B00D8F8E0 /* WFZhihuDaily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WFZhihuDaily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DF6566B1C3B6B9B00D8F8E0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5DF6566D1C3B6B9B00D8F8E0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -281,6 +286,9 @@
 				5DA913861C3CD33B002C23C2 /* WFBannerView.m */,
 				5DA913C41C3D14DA002C23C2 /* WFRefreshView.h */,
 				5DA913C51C3D14DA002C23C2 /* WFRefreshView.m */,
+				5DA913C71C3D19AF002C23C2 /* WFLoadingView.h */,
+				5DA913C81C3D19AF002C23C2 /* WFLoadingView.m */,
+				5DA913CA1C3D19F4002C23C2 /* LoadingAnimation.gif */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -631,6 +639,7 @@
 			files = (
 				5DA913C01C3D0D0A002C23C2 /* Resource.bundle in Resources */,
 				5DF656771C3B6B9B00D8F8E0 /* Assets.xcassets in Resources */,
+				5DA913CB1C3D19F4002C23C2 /* LoadingAnimation.gif in Resources */,
 				5DF656751C3B6B9B00D8F8E0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -713,6 +722,7 @@
 				D288D46C1C3C1E050034B742 /* WFLeftCell.m in Sources */,
 				5DA913BA1C3CF832002C23C2 /* WFDetailHeaderLayout.m in Sources */,
 				5D61D0931C3BB095007DF434 /* WFLatestNewsModel.m in Sources */,
+				5DA913C91C3D19AF002C23C2 /* WFLoadingView.m in Sources */,
 				5D6EA28E1C3BC1AC00C9462E /* WFMainViewCell.m in Sources */,
 				D288D4721C3C23790034B742 /* WFLeftVM.m in Sources */,
 				5D61D0671C3B9FFF007DF434 /* UINavigationController+XPPopGesture.m in Sources */,

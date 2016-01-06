@@ -7,15 +7,12 @@
 //
 
 #import "WFBaseController.h"
-#import "WFRefreshView.h"
 
 @interface WFBaseController ()<UITableViewDataSource,UITableViewDelegate>
 {
     UILabel *_navigationLabel;
     
 }
-@property (nonatomic, strong)WFRefreshView *refreshView;
-
 @end
 
 @implementation WFBaseController
@@ -51,7 +48,7 @@
 
     _navigationBar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 64)];
     _navigationBar.backgroundColor = RGBColor(5, 143, 214, 1.0f);
-    [self.view addSubview:_navigationBar];
+ 
     
     _navigationLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, kScreenWidth, 44)];
     _navigationLabel.textAlignment = NSTextAlignmentCenter;
@@ -72,6 +69,8 @@
     
     _refreshView = [[WFRefreshView alloc] initWithFrame:CGRectMake(100, 24, 20.f, 20.f)];
     [self.view addSubview:_refreshView];
+    
+    [self.view addSubview:_navigationBar];
 
 }
 

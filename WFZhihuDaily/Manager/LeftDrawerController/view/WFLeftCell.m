@@ -24,9 +24,9 @@
 
 - (void)configUI{
 
-    _subfieldLbl = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, 200, 44)];
+    _subfieldLbl = [[UILabel alloc] initWithFrame:CGRectMake(12, 0, 200, 44)];
     _subfieldLbl.textColor = [UIColor whiteColor];
-    _subfieldLbl.font = [UIFont systemFontOfSize:15];
+    _subfieldLbl.font = [UIFont systemFontOfSize:16];
     _subfieldLbl.textAlignment = NSTextAlignmentLeft;
     [self.contentView addSubview:_subfieldLbl];
 
