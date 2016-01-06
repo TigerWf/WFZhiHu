@@ -56,6 +56,7 @@ static NSString * const kCellID = @"WFCell";
     WS(weakSelf);
   
     self.navigationBar.alpha = 0.f;
+    self.navigationTitle = @"今日要闻";
     self.mainTableView.delegate = self;
     self.mainTableView.dataSource = self;
     [self.mainTableView registerClass:[WFMainViewCell class] forCellReuseIdentifier:kCellID];
@@ -127,7 +128,10 @@ static NSString * const kCellID = @"WFCell";
         float h = offSetY / 200;
         self.navigationBar.alpha = (h > 1)?1:h;
     
-        [(WFAutoLoopView *)(self.mainTableView.tableHeaderView) wf_parallaxHeaderViewWithOffset:scrollView.contentOffset];
+        if ([self.mainTableView.tableHeaderView isKindOfClass:[WFAutoLoopView class]]) {
+             [(WFAutoLoopView *)(self.mainTableView.tableHeaderView) wf_parallaxHeaderViewWithOffset:scrollView.contentOffset];
+        }
+        
     }
 
 

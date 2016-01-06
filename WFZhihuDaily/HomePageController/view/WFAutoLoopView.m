@@ -10,10 +10,15 @@
 #import "WFBannerModel.h"
 #import "WFBannerView.h"
 #define kDefaultHeaderFrame CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)
+#define kBannerViewTag 186681
+#define kAlpha 180
+
 
 @interface WFAutoLoopView () <UIScrollViewDelegate>
 {
     BOOL _isHasBanners;
+    CGFloat _offsetY;
+    CGFloat _titleAlpha;
 }
 @property (nonatomic, assign) int currentIdx;
 @property (nonatomic, assign) int pagesCount;
@@ -39,10 +44,12 @@
         [self addPageControl];
         // 初始化数据
         _isHasBanners = NO;
+        _offsetY = 0;
+        _titleAlpha = 1.f;
         _currentIdx = 0;
         _autoLoopScroll = YES;
         _stretchAnimation = NO;
-        _autoLoopScrollInterval = 3;
+        _autoLoopScrollInterval = 5;
     }
     return self;
 }
@@ -63,7 +70,7 @@
     
     _scrollView = [[UIScrollView alloc] initWithFrame:self.bounds];
     _scrollView.delegate = self;
-    _scrollView.backgroundColor = [UIColor yellowColor];
+    _scrollView.backgroundColor = [UIColor whiteColor];
     _scrollView.pagingEnabled = YES;
     _scrollView.contentSize = CGSizeMake(3 * kScreenWidth, 0);
     [self addSubview:_scrollView];
@@ -93,6 +100,7 @@
         [_cells addObject:self.autoLoopViewCellForIndex(_currentIdx)];
         [_cells addObject:self.autoLoopViewCellForIndex(nextIdx)];
     }
+    
 }
 
 #pragma mark 重载cells
@@ -104,6 +112,9 @@
     
     for (NSInteger i = 0; i < _cells.count; i ++) {
         WFBannerView *cell = [[WFBannerView alloc] init];
+        cell.tag = i + kBannerViewTag;
+        cell.offsetY = _offsetY;
+        cell.titleAlpha = _titleAlpha;
         cell.banner = [_cells[i] banner];
         cell.clickBannerCallBackBlock = [_cells[i] clickBannerCallBackBlock];
         cell.userInteractionEnabled = YES;
@@ -230,13 +241,30 @@
     }
     
     CGRect frame = _scrollView.frame;
+    
     if (offset.y > 0) {
         
         frame.origin.y = MAX(offset.y/2, 0);
         _scrollView.frame = frame;
         self.clipsToBounds = YES;
+        _offsetY = MAX(offset.y/2, 0);
+        
+        for (int i = 0 ; i < 3 ; i ++) {
+            
+            float h = offset.y / kAlpha;
+            
+            _titleAlpha = 1 - ((h > 1)?1:h);
+            
+            WFBannerView *bannerView = (WFBannerView *)[_scrollView viewWithTag:i + kBannerViewTag];
+            [bannerView.bannerTitleLbl setBottom:_scrollView.height - MAX(offset.y/2, 0) - 25];
+            
+            bannerView.bannerTitleLbl.alpha = _titleAlpha;
+            
+        }
+    
         
     }else{
+        
         CGFloat delta = 0.f;
         CGRect rect = kDefaultHeaderFrame;
         delta = fabs(MIN(0.f, offset.y));
@@ -246,6 +274,16 @@
         CGPoint newPoint = _scrollView.center;
         newPoint.y += delta;
         self.clipsToBounds = NO;
+        
+        _offsetY = 0;
+        
+        _titleAlpha = 1;
+        
+        for (int i = 0 ; i < 3 ; i ++) {
+            
+            WFBannerView *bannerView = (WFBannerView *)[_scrollView viewWithTag:i + kBannerViewTag];
+            [bannerView.bannerTitleLbl setBottom:_scrollView.height - 25];
+        }
     }
 }
 @end

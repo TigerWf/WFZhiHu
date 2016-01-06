@@ -29,10 +29,15 @@
 
 #pragma mark - View Load
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
-     self.view.backgroundColor = [UIColor whiteColor];
-    [self configNavigationBar];
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.extendedLayoutIncludesOpaqueBars = YES;
     [self configListView];
+    [self configNavigationBar];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -48,15 +53,15 @@
 
     _navigationBar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 64)];
     _navigationBar.backgroundColor = RGBColor(5, 143, 214, 1.0f);
- 
+    [self.view addSubview:_navigationBar];
     
     _navigationLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, kScreenWidth, 44)];
     _navigationLabel.textAlignment = NSTextAlignmentCenter;
-    _navigationLabel.font = [UIFont systemFontOfSize:18];
+    _navigationLabel.font = [UIFont boldSystemFontOfSize:18];
     _navigationLabel.textColor = [UIColor whiteColor];
     _navigationLabel.backgroundColor = [UIColor clearColor];
-    [self.view addSubview:_navigationLabel];
     
+     [self.view addSubview:_navigationLabel];
 }
 
 
@@ -67,11 +72,9 @@
     _mainTableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0.f, 0.f, kScreenWidth, 200.f)];
     [self.view addSubview:_mainTableView];
     
-    _refreshView = [[WFRefreshView alloc] initWithFrame:CGRectMake(100, 24, 20.f, 20.f)];
+    _refreshView = [[WFRefreshView alloc] initWithFrame:CGRectMake(125, 32, 22.f, 22.f)];
     [self.view addSubview:_refreshView];
     
-    [self.view addSubview:_navigationBar];
-
 }
 
 
@@ -114,6 +117,11 @@
 
 #pragma mark - Setter
 - (void)setNavigationTitle:(NSString *)navigationTitle{
+    
+    NSDictionary *attributesDic = @{NSFontAttributeName:[UIFont boldSystemFontOfSize:18],NSForegroundColorAttributeName:[UIColor whiteColor]};
+    CGSize size = [navigationTitle boundingRectWithSize:CGSizeMake(MAXFLOAT, 44) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:attributesDic context:nil].size;
+    
+    _refreshView.frame = CGRectMake(kScreenWidth/2 - size.width/2 - 22 - 5, 32, 22.f, 22.f);
     
     _navigationLabel.text = navigationTitle;
 

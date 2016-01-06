@@ -15,4 +15,10 @@
 
 @property (nonatomic,   copy) void(^clickBannerCallBackBlock)(WFBannerModel *banner);
 
+@property (nonatomic, strong)  UILabel *bannerTitleLbl;
+
+@property (nonatomic, assign)  CGFloat offsetY;
+
+@property (nonatomic, assign)  CGFloat titleAlpha;
+
 @end

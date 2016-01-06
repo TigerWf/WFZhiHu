@@ -13,5 +13,6 @@
 @property (nonatomic, copy) NSString *bannerImage; // 配图url
 @property (nonatomic, copy) NSString *bannerLink; // 配图link
 @property (nonatomic, copy) NSString *newsId;
+@property (nonatomic, copy) NSString *newsTitle;
 
 @end
