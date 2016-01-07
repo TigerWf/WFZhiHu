@@ -51,7 +51,11 @@
 #pragma mark - View factory
 - (void)configNavigationBar{
 
-    _navigationBar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 64)];
+    _statusBar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 20)];
+    _statusBar.backgroundColor = RGBColor(5, 143, 214, 1.0f);
+    [self.view addSubview:_statusBar];
+    
+    _navigationBar = [[UIView alloc] initWithFrame:CGRectMake(0, 20, kScreenWidth, 44)];
     _navigationBar.backgroundColor = RGBColor(5, 143, 214, 1.0f);
     [self.view addSubview:_navigationBar];
     
@@ -62,6 +66,12 @@
     _navigationLabel.backgroundColor = [UIColor clearColor];
     
      [self.view addSubview:_navigationLabel];
+    
+    _leftBarItemButton = [UIButton buttonWithType:0];
+    [_leftBarItemButton setImage:Image(@"leftIcon.png") forState:0];
+    _leftBarItemButton.frame = CGRectMake(0, 20, 44, 44);
+    [self.view addSubview:_leftBarItemButton];
+    [_leftBarItemButton addTarget:self action:@selector(openLeftDrawer) forControlEvents:UIControlEventTouchUpInside];
 }
 
 
@@ -79,19 +89,21 @@
 
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    
     if ([scrollView isEqual:self.mainTableView]){
-        CGFloat offSetY = scrollView.contentOffset.y;
         
+        CGFloat offSetY = scrollView.contentOffset.y;
+
         if (offSetY <= 0 && offSetY >= -80) {
-            if (-offSetY <= 60) {
+            if (-offSetY <= 40) {
                 if (!_isLoading) {
-                    [_refreshView redrawFromProgress:-offSetY/60];
+                    [_refreshView redrawFromProgress:-offSetY/40];
                 }else{
                     [_refreshView redrawFromProgress:0];
                 }
             }
            
-            if(!_isLoading && !scrollView.isDragging && -offSetY>60 && -offSetY<=80){
+            if(!_isLoading && !scrollView.isDragging && -offSetY>40 && -offSetY<=80){
                 
                 [_refreshView redrawFromProgress:0];
                 [_refreshView startAnimation];
@@ -101,16 +113,34 @@
             
             
         }else if(offSetY <- 80){
-            
+            [_refreshView redrawFromProgress:1];
         }else if(offSetY <= 300) {
             
             [_refreshView redrawFromProgress:0];
         }
+        
+        if (offSetY + 80 > scrollView.contentSize.height - kScreenHeight) {
+            if (!_isLoading) {
+                [self requestOldData];
+            }
+        }
     }
+}
+
+#pragma mark - 打开左抽屉
+- (void)openLeftDrawer{
+
+    
 }
 
 - (void)requestNewData{
 
+    _isLoading = YES;
+
+}
+
+- (void)requestOldData{
+    
     _isLoading = YES;
 
 }

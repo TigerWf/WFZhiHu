@@ -14,4 +14,6 @@
 
 @property (nonatomic, strong) NSString *leftDataString;
 
+@property (nonatomic, strong) UIImageView *arrowsImage;
+
 @end

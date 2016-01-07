@@ -12,7 +12,18 @@
 @interface WFMainController : UIViewController
 
 @property(nonatomic,strong) NSMutableArray   *controllers;//控制器数组
+@property(nonatomic,assign) BOOL isFold;//是否已经展开
 
+/**
+ *  打开抽屉
+ */
+- (void)showDrawerList;
+
+
+/**
+ *  隐藏抽屉
+ */
+- (void)hideDrawerList;
 
 /**
  *  初始化main viewcontroller

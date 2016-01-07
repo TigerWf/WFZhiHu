@@ -53,7 +53,7 @@
 - (void)setBanner:(WFBannerModel *)banner {
     
     _banner = banner;
-    [self wf_setImageWithUrlString:banner.bannerImage placeholderImage:nil];
+    [self wf_setImageWithUrlString:banner.bannerImage placeholderImage:Image(@"tags_selected.png")];
     
     NSAttributedString *attStr = [[NSAttributedString alloc] initWithString:banner.newsTitle attributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:21],NSForegroundColorAttributeName:[UIColor whiteColor]}];
     CGSize size =  [attStr boundingRectWithSize:CGSizeMake(kScreenWidth - 30, 200) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading context:nil].size;

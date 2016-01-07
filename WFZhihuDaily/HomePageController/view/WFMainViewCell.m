@@ -40,7 +40,7 @@
 - (void)setSingleNewsLayout:(WFSingelNewsLayout *)singleNewsLayout{
     
     WFSingelNewsModel *singleNewsModel = singleNewsLayout.singeModel;
-    [_newsImageView wf_setImageWithUrlString:singleNewsModel.imagesUrl[0] placeholderImage:nil];
+    [_newsImageView wf_setImageWithUrlString:singleNewsModel.imagesUrl[0] placeholderImage:Image(@"tags_selected.png")];
     _newsTitleLbl.text = singleNewsModel.newsTitle;
 
 }

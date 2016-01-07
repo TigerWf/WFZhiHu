@@ -22,12 +22,20 @@
 
 @property(nonatomic,strong)  UIView *navigationBar;
 
+@property(nonatomic,strong)  UIView *statusBar;
+
 @property(nonatomic,copy)  NSString *navigationTitle;
 
 @property(strong,nonatomic) UITableView  *mainTableView;
 
 @property (nonatomic, strong)WFRefreshView *refreshView;
 
+@property (nonatomic, strong) UIButton *leftBarItemButton;
+
 - (void)requestNewData;
+
+- (void)requestOldData;
+
+- (void)openLeftDrawer;
 
 @end

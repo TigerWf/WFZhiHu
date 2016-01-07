@@ -23,4 +23,8 @@ typedef void(^GetNewsDetailSuccessBlock)(WFDetailNewsModel *);
                       success:(GetNewsDetailSuccessBlock)success
                       failure:(wf_reqFailureBlock)failure;
 
+
++ (void)wf_getPreviousNewsWithDate:(NSString *)dateStr
+                           success:(GetMainViewInfoSuccessBlock)success
+                           failure:(wf_reqFailureBlock)failure;
 @end

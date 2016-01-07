@@ -24,11 +24,16 @@
 
 - (void)configUI{
 
-    _subfieldLbl = [[UILabel alloc] initWithFrame:CGRectMake(12, 0, 200, 44)];
+    _subfieldLbl = [[UILabel alloc] initWithFrame:CGRectMake(16, 0, 200, 44)];
     _subfieldLbl.textColor = [UIColor whiteColor];
     _subfieldLbl.font = [UIFont systemFontOfSize:16];
     _subfieldLbl.textAlignment = NSTextAlignmentLeft;
     [self.contentView addSubview:_subfieldLbl];
+    
+    
+    _arrowsImage = [[UIImageView alloc] initWithFrame:CGRectMake(kScreenWidth * kDrawerRatio - 55, 13, 15, 18)];
+    _arrowsImage.image = Image(@"leftEnter.png");
+    [self.contentView addSubview:_arrowsImage];
 
 }
 

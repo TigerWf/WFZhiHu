@@ -55,6 +55,7 @@
     }else if (progress <= 0){
         _whiteCircleLayer.opacity = 0.f;
         _grayCircleLayer.opacity = 0.f;
+        return;
     }
     _whiteCircleLayer.strokeEnd = progress;
     

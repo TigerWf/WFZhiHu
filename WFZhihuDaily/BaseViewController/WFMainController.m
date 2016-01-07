@@ -15,7 +15,7 @@
 {
     UIView *_leftMenuView;//左边目录栏的视图
     CGFloat _originX;
-    BOOL    _isFold;//是否已经展开
+   
     UITapGestureRecognizer *_tapGesture;//单击手势
     
 }
@@ -328,6 +328,22 @@
     [self hideDrawerList];
 }
 
+#pragma mark - 打开抽屉
+- (void)showDrawerList{
+
+    [UIView animateWithDuration:0.4f animations:^{
+        
+        _leftMenuView.frame = CGRectMake(0, 0, kScreenWidth * kDrawerRatio, kScreenHeight);
+        _containerController.view.frame = CGRectMake(kScreenWidth * kDrawerRatio, 0, kScreenWidth, kScreenHeight);
+        
+    } completion:^(BOOL finished) {
+        
+        [_containerController.view addGestureRecognizer:_tapGesture];
+        _showViewController.view.userInteractionEnabled = NO;
+        _isFold = YES;
+    }];
+
+}
 
 #pragma mark - 隐藏抽屉栏
 - (void)hideDrawerList{

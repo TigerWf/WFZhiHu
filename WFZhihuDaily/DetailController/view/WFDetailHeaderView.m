@@ -43,7 +43,7 @@
     _titleLab.frame     = [[viewModel detailHeaderLayout] titleLblRect];
     _imgSourceLab.frame = [[viewModel detailHeaderLayout] imgSourceLabRect];
     
-    [_imageView wf_setImageWithUrlString:[[viewModel detailHeaderLayout] imageUrl] placeholderImage:nil];
+    [_imageView wf_setImageWithUrlString:[[viewModel detailHeaderLayout] imageUrl] placeholderImage:Image(@"tags_selected.png")];
     _titleLab.attributedText = [[viewModel detailHeaderLayout] titleLblString];
     _imgSourceLab.text = [[viewModel detailHeaderLayout] imgSourceString];
 
