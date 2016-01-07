@@ -58,7 +58,6 @@
         UITouch *touch = [touches anyObject];
         
         if (touch.phase == UITouchPhaseBegan) {
-            DLog(@"begin");
            [self addGestureRecognizer:_webView.scrollView.panGestureRecognizer];
         }
     }

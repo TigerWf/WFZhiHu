@@ -117,7 +117,7 @@
 
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
-    
+
     if (gestureRecognizer != self.navigationController.xp_fullscreenPopGestureRecognizer) return NO;
     
     if (self.navigationController.xp_fullscreenPopGestureRecognizer.state != UIGestureRecognizerStateBegan) return NO;
@@ -135,8 +135,12 @@
             return YES;
         }
     }
-    //end add
+   
  
+    if ([[otherGestureRecognizer view] isKindOfClass:[UIWebView class]]) {
+        return NO;
+    }
+     //end add
     return NO;
 
 }

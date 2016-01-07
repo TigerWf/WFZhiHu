@@ -33,4 +33,15 @@
     return [super hitTest:point withEvent:event];
 }
 
+- (void)webViewDidFinishLoad:(UIWebView *)webView{
+    DLog(@"finish");
+}
+
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
+
+    DLog(@"request.URL = %@",request.URL);
+    return YES;
+
+}
+
 @end
