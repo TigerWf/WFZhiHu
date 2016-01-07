@@ -27,4 +27,9 @@ typedef void(^GetNewsDetailSuccessBlock)(WFDetailNewsModel *);
 + (void)wf_getPreviousNewsWithDate:(NSString *)dateStr
                            success:(GetMainViewInfoSuccessBlock)success
                            failure:(wf_reqFailureBlock)failure;
+
+
++ (void)wf_getLaunchImageWithSize:(NSString *)size
+                          success:(wf_reqSuccessBlock)success
+                          failure:(wf_reqFailureBlock)failure;
 @end

@@ -15,6 +15,8 @@
 #import "WFLeftVM.h"
 #import "WFCommonVM.h"
 
+#import "WFManager+MainViewInfo.h"
+
 #import "WFCartoonController.h"
 #import "WFCompanyController.h"
 #import "WFDesignController.h"
@@ -29,7 +31,10 @@
 #import "WFSportController.h"
 
 @interface AppDelegate ()
-
+{
+    UIImageView *_firstLaunchView;
+    UIImageView *_secondLaunchView;
+}
 @end
 
 @implementation AppDelegate
@@ -42,8 +47,35 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    [self setLaunchView];
     return YES;
 
+}
+
+- (void)setLaunchView{
+    
+    _secondLaunchView = [[UIImageView alloc] initWithFrame:kScreenBounds];
+    _secondLaunchView.contentMode = UIViewContentModeScaleAspectFill;
+    [self.window addSubview:_secondLaunchView];
+    
+    _firstLaunchView = [[UIImageView alloc] initWithFrame:kScreenBounds];
+    _firstLaunchView.contentMode = UIViewContentModeScaleAspectFill;
+    _firstLaunchView.image = Image(@"Default");
+    [self.window addSubview:_firstLaunchView];
+    
+    [WFManager wf_getLaunchImageWithSize:@"720*1184" success:^(id data) {
+        [_secondLaunchView wf_setImageWithUrlString:data[@"img"] placeholderImage:nil];
+        [UIView animateWithDuration:2.f animations:^{
+            _firstLaunchView.alpha = 0.f;
+            _secondLaunchView.transform = CGAffineTransformMakeScale(1.2f, 1.2f);
+        } completion:^(BOOL finished) {
+            [_firstLaunchView removeFromSuperview];
+            [_secondLaunchView removeFromSuperview];
+        }];
+    } failure:^(WFError *error) {
+        [_firstLaunchView removeFromSuperview];
+        [_secondLaunchView removeFromSuperview];
+    }];
 }
 
 //有点sb？
