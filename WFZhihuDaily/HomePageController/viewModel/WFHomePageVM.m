@@ -19,6 +19,14 @@
     
     [WFManager wf_getMainViewNewsWithField:@"latest" success:^(WFLatestNewsModel *newsModel) {
         
+        
+        if (_newsIdArray) {
+            [_newsIdArray removeAllObjects];
+            _newsIdArray = nil;
+        }
+        _newsIdArray = [[NSMutableArray alloc] init];
+       
+        
         _currentDay = newsModel.date;
         
         if (_dateList) {
@@ -42,6 +50,8 @@
         
         for (WFSingelNewsModel *singeModel in listNewsArr) {
            
+            [_newsIdArray addObject:singeModel.newsId];//添加id信息
+            
             WFSingelNewsLayout *layout = [WFSingelNewsLayout new];
             layout.singeModel = singeModel;
             [tempArray addObject:layout];
@@ -86,6 +96,8 @@
         
         NSMutableArray *tempArray = [[NSMutableArray alloc] init];
         for (WFSingelNewsModel *singeModel in listNewsArr) {
+            
+            [_newsIdArray addObject:singeModel.newsId];//添加id信息
             
             WFSingelNewsLayout *layout = [WFSingelNewsLayout new];
             layout.singeModel = singeModel;

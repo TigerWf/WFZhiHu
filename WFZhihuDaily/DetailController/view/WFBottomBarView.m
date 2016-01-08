@@ -40,7 +40,18 @@
         [button setImage:Image(imgArr[i]) forState:0];
         [button addTarget:self action:@selector(selectBtn:) forControlEvents:1<<6];
         [self addSubview:button];
+        
+        if (i == 1) {
+            button.enabled = _nextArrowsEnable;
+        }
     }
+}
+
+#pragma mark - Setter -
+- (void)setNextArrowsEnable:(BOOL)nextArrowsEnable{
+   
+    UIButton *btn = (UIButton *)[self viewWithTag:kBottomTag + 1];
+    btn.enabled = nextArrowsEnable;
 }
 
 - (void)selectBtn:(UIButton *)button{

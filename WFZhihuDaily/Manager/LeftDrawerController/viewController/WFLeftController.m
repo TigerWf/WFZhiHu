@@ -9,6 +9,7 @@
 #import "WFLeftController.h"
 #import "WFLeftCell.h"
 #import "WFLeftBottomView.h"
+#import "WFLeftTopView.h"
 
 @interface WFLeftController ()<UITableViewDataSource,UITableViewDelegate>
 {
@@ -40,7 +41,7 @@ static NSString * const kLeftCellID = @"WFLeftCell";
 
 - (void)configUI{
    
-    _mainTable = [[UITableView alloc] initWithFrame:CGRectMake(0, 105, kScreenWidth, kScreenHeight - 105 - 50)];
+    _mainTable = [[UITableView alloc] initWithFrame:CGRectMake(0, 120, kScreenWidth, kScreenHeight - 120 - 50)];
     _mainTable.delegate = self;
     _mainTable.dataSource = self;
     _mainTable.backgroundColor = RGBColor(35, 42, 48, 1.0);
@@ -50,6 +51,9 @@ static NSString * const kLeftCellID = @"WFLeftCell";
     
     WFLeftBottomView *bottomView = [[WFLeftBottomView alloc] initWithFrame:CGRectMake(0, kScreenHeight - 50, kScreenWidth *kDrawerRatio, 50)];
     [self.view addSubview:bottomView];
+    
+    WFLeftTopView *topView = [[WFLeftTopView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth * kDrawerRatio, 120)];
+    [self.view addSubview:topView];
 }
 
 - (void)registCellClass{

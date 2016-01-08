@@ -106,6 +106,7 @@ static NSString * const kHeaderID = @"WFHeader";
         
         WFDetailVM *detailVM = [[WFDetailVM alloc] init];
         detailVM.singleNewsModel = singleNewsModel;
+        detailVM.storeIdArray = weakSelf.viewModel.newsIdArray;
         
         WFDetailController *detail = [[WFDetailController alloc] initWithViewModel:detailVM];
         [weakSelf.navigationController pushViewController:detail animated:YES];
@@ -137,6 +138,7 @@ static NSString * const kHeaderID = @"WFHeader";
     
     WFDetailVM *detailVM = [[WFDetailVM alloc] init];
     detailVM.singleNewsModel = [[_viewModel singleNewsAtIndexPath:indexPath] singeModel];
+    detailVM.storeIdArray = _viewModel.newsIdArray;
     
     WFDetailController *detail = [[WFDetailController alloc] initWithViewModel:detailVM];
     [self.navigationController pushViewController:detail animated:YES];

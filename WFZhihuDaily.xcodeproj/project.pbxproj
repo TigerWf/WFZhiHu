@@ -21,6 +21,7 @@
 		5D6EA28E1C3BC1AC00C9462E /* WFMainViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6EA28D1C3BC1AC00C9462E /* WFMainViewCell.m */; };
 		5D6EA2911C3BC5B400C9462E /* WFSingelNewsLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6EA2901C3BC5B400C9462E /* WFSingelNewsLayout.m */; };
 		5D6EA2941C3BC66900C9462E /* UIImageView+WFImg.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6EA2931C3BC66900C9462E /* UIImageView+WFImg.m */; };
+		5D9C08D21C3FB5F400F4B6CF /* WFLeftTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9C08D11C3FB5F400F4B6CF /* WFLeftTopView.m */; };
 		5DA913541C3CBDA5002C23C2 /* WFCommonVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA913531C3CBDA5002C23C2 /* WFCommonVM.m */; };
 		5DA913711C3CBDBB002C23C2 /* WFCommonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA913571C3CBDBB002C23C2 /* WFCommonController.m */; };
 		5DA913721C3CBDBB002C23C2 /* WFCartoonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA9135A1C3CBDBB002C23C2 /* WFCartoonController.m */; };
@@ -97,6 +98,8 @@
 		5D6EA2901C3BC5B400C9462E /* WFSingelNewsLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFSingelNewsLayout.m; sourceTree = "<group>"; };
 		5D6EA2921C3BC66900C9462E /* UIImageView+WFImg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WFImg.h"; sourceTree = "<group>"; };
 		5D6EA2931C3BC66900C9462E /* UIImageView+WFImg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WFImg.m"; sourceTree = "<group>"; };
+		5D9C08D01C3FB5F400F4B6CF /* WFLeftTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFLeftTopView.h; sourceTree = "<group>"; };
+		5D9C08D11C3FB5F400F4B6CF /* WFLeftTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFLeftTopView.m; sourceTree = "<group>"; };
 		5DA913521C3CBDA5002C23C2 /* WFCommonVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFCommonVM.h; sourceTree = "<group>"; };
 		5DA913531C3CBDA5002C23C2 /* WFCommonVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFCommonVM.m; sourceTree = "<group>"; };
 		5DA913561C3CBDBB002C23C2 /* WFCommonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFCommonController.h; sourceTree = "<group>"; };
@@ -563,6 +566,8 @@
 			children = (
 				D288D46A1C3C1E050034B742 /* WFLeftCell.h */,
 				D288D46B1C3C1E050034B742 /* WFLeftCell.m */,
+				5D9C08D01C3FB5F400F4B6CF /* WFLeftTopView.h */,
+				5D9C08D11C3FB5F400F4B6CF /* WFLeftTopView.m */,
 				5DC065C81C3E6077000DC68E /* WFLeftBottomView.h */,
 				5DC065C91C3E6077000DC68E /* WFLeftBottomView.m */,
 			);
@@ -749,6 +754,7 @@
 				5D61D0901C3BB07C007DF434 /* WFSingelNewsModel.m in Sources */,
 				5DF6566F1C3B6B9B00D8F8E0 /* AppDelegate.m in Sources */,
 				5D61D06E1C3BA8E7007DF434 /* WFDetailController.m in Sources */,
+				5D9C08D21C3FB5F400F4B6CF /* WFLeftTopView.m in Sources */,
 				5DA913AE1C3CDE3A002C23C2 /* WFDetailHeaderView.m in Sources */,
 				5D61D0861C3BAA1D007DF434 /* WFManager.m in Sources */,
 				5D6EA2941C3BC66900C9462E /* UIImageView+WFImg.m in Sources */,

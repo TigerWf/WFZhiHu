@@ -18,5 +18,6 @@
 @interface WFBottomBarView : UIView
 
 @property (nonatomic,assign) id<WFBottomBarDelegate>delegate;
+@property (nonatomic,assign) BOOL nextArrowsEnable;
 
 @end
