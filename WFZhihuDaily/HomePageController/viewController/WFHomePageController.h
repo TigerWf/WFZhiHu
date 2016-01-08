@@ -8,7 +8,9 @@
 
 #import "WFBaseController.h"
 #import "WFHomePageVM.h"
-
+/*
+ * 首页
+ */
 @interface WFHomePageController : WFBaseController
 
 - (instancetype)initWithViewModel:(WFHomePageVM *)viewModel;

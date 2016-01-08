@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ *  首页日期表头
+ */
 @interface WFDateHeaderView : UITableViewHeaderFooterView
 
 @end

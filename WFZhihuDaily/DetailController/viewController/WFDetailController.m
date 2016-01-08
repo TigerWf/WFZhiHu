@@ -57,7 +57,14 @@
     [self.navigationController setNavigationBarHidden:YES animated:NO];
 }
 
+- (void)viewDidDisappear:(BOOL)animated{
+    
+    [super viewDidDisappear:animated];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+}
 
+
+#pragma mark - View factory
 - (void)configUI{
 
     _detailWeb = [[WFWebView alloc] initWithFrame:CGRectMake(0, 20, kScreenWidth, kScreenHeight - 20 - 44)];
@@ -84,7 +91,7 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
 
     CGFloat offSetY = scrollView.contentOffset.y;
-
+    DLog(@"==%f",-offSetY);
     if (-offSetY <= 80 && -offSetY >= 0) {
         
         [_detailHeaderView wf_parallaxHeaderViewWithOffset:offSetY];
@@ -92,7 +99,7 @@
         if (-offSetY > 40 && !_detailWeb.scrollView.isDragging){
             //[self.viewmodel getPreviousStoryContent];
         }
-    }else if (-offSetY > 80) {
+    }else if (-offSetY > 80) {//到－80 让webview不再能被拉动
         
         _detailWeb.scrollView.contentOffset = CGPointMake(0, -80);
         
@@ -104,6 +111,11 @@
         // [self.viewmodel getNextStoryContent];
     }
 
+    if (offSetY >= 200) {
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+    }else{
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    }
 }
 
 #pragma mark - WFBottomBarDelegate - 

@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "WFBannerModel.h"
 
+/**
+ *  循环图
+ */
 @interface WFAutoLoopView : UIView
 
 @property (nonatomic, copy)   void(^clickAutoLoopCallBackBlock)(WFBannerModel *banner);//点击图片事件回调

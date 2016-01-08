@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "WFSingelNewsModel.h"
 #import "WFSingelNewsLayout.h"
-
+/**
+ *  首页自定义cell
+ */
 @interface WFMainViewCell : UITableViewCell
 
 @property (nonatomic, strong) UIImageView *newsImageView;

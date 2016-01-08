@@ -11,6 +11,9 @@
 
 @interface WFMainController : UIViewController
 
+/**
+ *  根视图控制器
+ */
 @property(nonatomic,strong) NSMutableArray   *controllers;//控制器数组
 @property(nonatomic,assign) BOOL isFold;//是否已经展开
 

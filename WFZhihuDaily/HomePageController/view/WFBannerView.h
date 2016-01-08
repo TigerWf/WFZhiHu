@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "WFBannerModel.h"
 
+/**
+ *  banner视图
+ */
 @interface WFBannerView : UIImageView
 
 @property (nonatomic, strong) WFBannerModel *banner;

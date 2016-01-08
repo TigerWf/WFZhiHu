@@ -17,6 +17,7 @@
     CGFloat _originX;
    
     UITapGestureRecognizer *_tapGesture;//单击手势
+    UIPanGestureRecognizer *_panGesture;
     
 }
 
@@ -43,6 +44,7 @@
 
 }
 
+#pragma mark - View Load
 - (void)viewWillDisappear:(BOOL)animated{
 
     [super viewWillDisappear:animated];
@@ -108,9 +110,9 @@
     
     [self convertControllerLayerLevel];
 
-    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panAction:)];
-    panGesture.delegate = self;
-    [self.view addGestureRecognizer:panGesture];
+    _panGesture = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panAction:)];
+    _panGesture.delegate = self;
+    [self.view addGestureRecognizer:_panGesture];
     
     _tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)];
  
@@ -181,17 +183,10 @@
 }
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
-    
-    if ([otherGestureRecognizer isKindOfClass:[XPPanGestureRecognizer class]]) {
-        return NO;
-    }
-    
-    if ([otherGestureRecognizer.view isKindOfClass:[UIScrollView class]]) {
-        return NO;
-    }
-    
-    return YES;
+
+    return NO;
 }
+
 #pragma mark - 平移手势
 - (void)panAction:(UIPanGestureRecognizer *)recongnizer{
     
