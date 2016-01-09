@@ -16,7 +16,7 @@
     clickLayer.frame = CGRectMake(0, 0, 30, 30);
     clickLayer.cornerRadius = 15;
     clickLayer.position = point;
-    clickLayer.opacity = 0.9f;
+    clickLayer.opacity = 0.4f;
     [self.layer addSublayer:clickLayer];
     clickLayer.contents = (id)Image(@"leftClick.png").CGImage;
     
