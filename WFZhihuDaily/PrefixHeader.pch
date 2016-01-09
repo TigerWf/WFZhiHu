@@ -18,5 +18,7 @@
 #import "WFToolKit.h"
 #import "UIImageView+WFImg.h"
 #import "UIView+Extension.h"
+#import "UIImageView+WebCache.h"
+#import "WFToastView.h"
 
 #endif /* PrefixHeader_pch */

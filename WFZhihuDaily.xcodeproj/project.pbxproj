@@ -60,10 +60,13 @@
 		5DF656951C3B6CC100D8F8E0 /* WFBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF656871C3B6CC100D8F8E0 /* WFBaseController.m */; };
 		5DF656971C3B6CC100D8F8E0 /* WFMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF6568B1C3B6CC100D8F8E0 /* WFMainController.m */; };
 		9562680C9046DAF9802DE4C0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56D18C7690F4F098F76ED7B6 /* libPods.a */; };
+		D282F7061C40192200D15426 /* WFLeftContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = D282F7051C40192200D15426 /* WFLeftContainer.m */; };
 		D288D4691C3C1DE00034B742 /* WFLeftController.m in Sources */ = {isa = PBXBuildFile; fileRef = D288D4681C3C1DE00034B742 /* WFLeftController.m */; };
 		D288D46C1C3C1E050034B742 /* WFLeftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D288D46B1C3C1E050034B742 /* WFLeftCell.m */; };
 		D288D46F1C3C228C0034B742 /* WFLeftDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D288D46E1C3C228C0034B742 /* WFLeftDataModel.m */; };
 		D288D4721C3C23790034B742 /* WFLeftVM.m in Sources */ = {isa = PBXBuildFile; fileRef = D288D4711C3C23780034B742 /* WFLeftVM.m */; };
+		D2B0F0941C41115B00282633 /* WFWebImageShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B0F0931C41115B00282633 /* WFWebImageShowView.m */; };
+		D2B0F0971C4129F300282633 /* WFToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B0F0961C4129F300282633 /* WFToastView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -175,6 +178,8 @@
 		5DF6568A1C3B6CC100D8F8E0 /* WFMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFMainController.h; sourceTree = "<group>"; };
 		5DF6568B1C3B6CC100D8F8E0 /* WFMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFMainController.m; sourceTree = "<group>"; };
 		8420BF67AF1838D7B6CC5DB5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		D282F7041C40192200D15426 /* WFLeftContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFLeftContainer.h; sourceTree = "<group>"; };
+		D282F7051C40192200D15426 /* WFLeftContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFLeftContainer.m; sourceTree = "<group>"; };
 		D288D4671C3C1DE00034B742 /* WFLeftController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFLeftController.h; sourceTree = "<group>"; };
 		D288D4681C3C1DE00034B742 /* WFLeftController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFLeftController.m; sourceTree = "<group>"; };
 		D288D46A1C3C1E050034B742 /* WFLeftCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFLeftCell.h; sourceTree = "<group>"; };
@@ -183,6 +188,10 @@
 		D288D46E1C3C228C0034B742 /* WFLeftDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFLeftDataModel.m; sourceTree = "<group>"; };
 		D288D4701C3C23780034B742 /* WFLeftVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFLeftVM.h; sourceTree = "<group>"; };
 		D288D4711C3C23780034B742 /* WFLeftVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFLeftVM.m; sourceTree = "<group>"; };
+		D2B0F0921C41115B00282633 /* WFWebImageShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFWebImageShowView.h; sourceTree = "<group>"; };
+		D2B0F0931C41115B00282633 /* WFWebImageShowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFWebImageShowView.m; sourceTree = "<group>"; };
+		D2B0F0951C4129F300282633 /* WFToastView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFToastView.h; sourceTree = "<group>"; };
+		D2B0F0961C4129F300282633 /* WFToastView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFToastView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -299,6 +308,8 @@
 				5DA913C81C3D19AF002C23C2 /* WFLoadingView.m */,
 				5DC429A71C3E3B1D00D35955 /* WFDateHeaderView.h */,
 				5DC429A81C3E3B1D00D35955 /* WFDateHeaderView.m */,
+				D2B0F0951C4129F300282633 /* WFToastView.h */,
+				D2B0F0961C4129F300282633 /* WFToastView.m */,
 				5DA913CA1C3D19F4002C23C2 /* LoadingAnimation.gif */,
 			);
 			path = view;
@@ -396,6 +407,8 @@
 				5DA913B61C3CF628002C23C2 /* WFWebView.m */,
 				5DA913C11C3D0FF5002C23C2 /* WFBottomBarView.h */,
 				5DA913C21C3D0FF5002C23C2 /* WFBottomBarView.m */,
+				D2B0F0921C41115B00282633 /* WFWebImageShowView.h */,
+				D2B0F0931C41115B00282633 /* WFWebImageShowView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -570,6 +583,8 @@
 				5D9C08D11C3FB5F400F4B6CF /* WFLeftTopView.m */,
 				5DC065C81C3E6077000DC68E /* WFLeftBottomView.h */,
 				5DC065C91C3E6077000DC68E /* WFLeftBottomView.m */,
+				D282F7041C40192200D15426 /* WFLeftContainer.h */,
+				D282F7051C40192200D15426 /* WFLeftContainer.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -725,6 +740,7 @@
 				5D61D0841C3BAA1D007DF434 /* WFHttpMgr.m in Sources */,
 				5DA913751C3CBDBB002C23C2 /* WFDonotBoredController.m in Sources */,
 				D288D4691C3C1DE00034B742 /* WFLeftController.m in Sources */,
+				D2B0F0941C41115B00282633 /* WFWebImageShowView.m in Sources */,
 				5DA913711C3CBDBB002C23C2 /* WFCommonController.m in Sources */,
 				5DA9137B1C3CBDBB002C23C2 /* WFPsychicController.m in Sources */,
 				5DA913781C3CBDBB002C23C2 /* WFGameController.m in Sources */,
@@ -749,10 +765,12 @@
 				5D61D08D1C3BAF76007DF434 /* WFHomePageVM.m in Sources */,
 				5DF656951C3B6CC100D8F8E0 /* WFBaseController.m in Sources */,
 				5D6EA2911C3BC5B400C9462E /* WFSingelNewsLayout.m in Sources */,
+				D282F7061C40192200D15426 /* WFLeftContainer.m in Sources */,
 				5DA913C61C3D14DA002C23C2 /* WFRefreshView.m in Sources */,
 				5DA9137A1C3CBDBB002C23C2 /* WFNetSecurityController.m in Sources */,
 				5D61D0901C3BB07C007DF434 /* WFSingelNewsModel.m in Sources */,
 				5DF6566F1C3B6B9B00D8F8E0 /* AppDelegate.m in Sources */,
+				D2B0F0971C4129F300282633 /* WFToastView.m in Sources */,
 				5D61D06E1C3BA8E7007DF434 /* WFDetailController.m in Sources */,
 				5D9C08D21C3FB5F400F4B6CF /* WFLeftTopView.m in Sources */,
 				5DA913AE1C3CDE3A002C23C2 /* WFDetailHeaderView.m in Sources */,

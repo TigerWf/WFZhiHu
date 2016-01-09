@@ -92,6 +92,7 @@ static NSString * const kHeaderID = @"WFHeader";
 
     if (_autoLoopView) {
         [_autoLoopView removeFromSuperview];
+        [self.mainTableView setTableHeaderView:nil];
     }
     
     WS(weakSelf);

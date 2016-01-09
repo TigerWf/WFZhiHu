@@ -10,10 +10,12 @@
 #import "WFLeftCell.h"
 #import "WFLeftBottomView.h"
 #import "WFLeftTopView.h"
+#import "WFLeftContainer.h"
 
-@interface WFLeftController ()<UITableViewDataSource,UITableViewDelegate>
+@interface WFLeftController ()<UITableViewDataSource,UITableViewDelegate,UIGestureRecognizerDelegate>
 {
     UITableView *_mainTable;
+    WFLeftContainer *_container;
 }
 
 
@@ -36,24 +38,29 @@ static NSString * const kLeftCellID = @"WFLeftCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = RGBColor(35, 42, 48, 1.0);
+    
     [self configUI];
+   
 }
 
 - (void)configUI{
+    
+    _container = [[WFLeftContainer alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:_container];
    
     _mainTable = [[UITableView alloc] initWithFrame:CGRectMake(0, 120, kScreenWidth, kScreenHeight - 120 - 50)];
     _mainTable.delegate = self;
     _mainTable.dataSource = self;
     _mainTable.backgroundColor = RGBColor(35, 42, 48, 1.0);
     _mainTable.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [self.view addSubview:_mainTable];
+    [_container addSubview:_mainTable];
     [self registCellClass];
     
     WFLeftBottomView *bottomView = [[WFLeftBottomView alloc] initWithFrame:CGRectMake(0, kScreenHeight - 50, kScreenWidth *kDrawerRatio, 50)];
-    [self.view addSubview:bottomView];
+    [_container addSubview:bottomView];
     
     WFLeftTopView *topView = [[WFLeftTopView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth * kDrawerRatio, 120)];
-    [self.view addSubview:topView];
+    [_container addSubview:topView];
 }
 
 - (void)registCellClass{

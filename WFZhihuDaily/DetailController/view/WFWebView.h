@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "WFDetailVM.h"
 
-@interface WFWebView : UIWebView<UIWebViewDelegate>
+@interface WFWebView : UIWebView<UIWebViewDelegate,UIGestureRecognizerDelegate>
 
 @end
