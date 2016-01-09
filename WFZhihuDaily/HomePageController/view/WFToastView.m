@@ -2,7 +2,7 @@
 //  WFToastView.m
 //  WFZhihuDaily
 //
-//  Created by 吴福虎 on 16/1/9.
+//  Created by 阿虎 on 16/1/9.
 //  Copyright (c) 2016年 xiupintech. All rights reserved.
 //
 
