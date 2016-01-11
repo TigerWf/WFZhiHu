@@ -10,12 +10,19 @@
 #import "WFSingelNewsModel.h"
 #import "WFDetailNewsModel.h"
 #import "WFDetailHeaderLayout.h"
+#import "WFDetailExtraModel.h"
 
 typedef void(^getDataFinish)();
+typedef void(^getExtraFinish)();
 
 @interface WFDetailVM : NSObject
 
 @property (nonatomic, strong) WFSingelNewsModel *singleNewsModel;
+
+/**
+ *  新闻额外信息
+ */
+@property (nonatomic, strong) WFDetailExtraModel *extraModel;
 
 /**
  *  存放内容id的数组
@@ -53,11 +60,23 @@ typedef void(^getDataFinish)();
 - (void)getNextData:(getDataFinish)getFinish;
 
 
+/**
+ *  获得该新闻的额外信息
+ *
+ *  @param getFinish 回调
+ */
+- (void)requestExtraInfo:(getExtraFinish)getExtraFinish;
+
+
+- (void)getPreviousExtraData:(getDataFinish)getExtraFinish;
+
+- (void)getNextExtraData:(getDataFinish)getExtraFinish;
 
 - (WFDetailNewsModel *)detailSourceData;
 
 - (NSString *)loadWebViewHtml;
 
 - (WFDetailHeaderLayout *)detailHeaderLayout;
+
 
 @end

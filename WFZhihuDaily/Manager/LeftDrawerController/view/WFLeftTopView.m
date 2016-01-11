@@ -22,8 +22,12 @@
 
 - (void)configUI{
     
+    _avatarImage = [[UIImageView alloc] initWithFrame:CGRectMake(20, 25, 35, 35)];
+    _avatarImage.image = Image(@"leftAvatar.png");
+    [self addSubview:_avatarImage];
+    
     UIButton *loginBtn = [UIButton buttonWithType:0];
-    loginBtn.frame = CGRectMake(0, 20, self.frame.size.width, self.frame.size.height / 2 - 10);
+    loginBtn.frame = CGRectMake(50, 20, self.frame.size.width - 50, self.frame.size.height / 2 - 10);
     [loginBtn setTitle:@"请登录" forState:0];
     loginBtn.titleLabel.font = [UIFont systemFontOfSize:14];
     [self addSubview:loginBtn];

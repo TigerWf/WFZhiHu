@@ -19,5 +19,7 @@
 
 @property (nonatomic,assign) id<WFBottomBarDelegate>delegate;
 @property (nonatomic,assign) BOOL nextArrowsEnable;
+@property (nonatomic,copy)   NSString *voteNum;
+@property (nonatomic,copy)   NSString *commentNum;
 
 @end

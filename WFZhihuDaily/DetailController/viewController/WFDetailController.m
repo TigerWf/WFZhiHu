@@ -54,6 +54,10 @@
         [_loadingView dismissLoadingView];
         _loadingView = nil;
     }];
+    
+    [_viewModel requestExtraInfo:^{
+        [weakSelf refreshBottomUI];
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -124,6 +128,13 @@
    
 }
 
+- (void)refreshBottomUI{
+
+    _detailBottomView.voteNum = _viewModel.extraModel.popularity;
+    _detailBottomView.commentNum = _viewModel.extraModel.comments;
+
+}
+
 #pragma mark - UIScrollView Delegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
 
@@ -190,10 +201,12 @@
                                     self.loadingView = nil;
                                     _viewModel.isLoading = NO;
             
-        }];);
-        
-    
-    }];
+                            }];
+                     
+                            [_viewModel getPreviousExtraData:^{
+                                    [weakSelf refreshBottomUI];
+                            }];);
+            }];
 }
 
 
@@ -224,16 +237,17 @@
                             [self.loadingView dismissLoadingView];
                             self.loadingView = nil;
                             _viewModel.isLoading = NO;
-        }];);
+                    }];
+                     
+                    [_viewModel getNextExtraData:^{
+            
+                            [weakSelf refreshBottomUI];
+                    }];);
         
-        
-    }];
-
-
-
+        }];
 }
 
-#pragma mark - WFWebViewDelegate - 
+#pragma mark - WFWebViewDelegate -
 - (void)clickActionOnHyperlink:(NSString *)linkUrl{
 
     WFOutsideWebController *outSideWeb = [[WFOutsideWebController alloc] initWithReqUrl:linkUrl];
@@ -277,6 +291,18 @@
         case 3:
         {
             
+            [[WFSharePanelView sharedManager] showSharePanelHasStore:YES byClick:^(SharePlatform plat) {
+                DLog(@"plat == %zi",plat);
+                
+            } withPlatform:WFSharePlatformWeChat,WFSharePlatformWeChatFriends,WFSharePlatformQQ,WFSharePlatformSinaWeibo,WFSharePlatformCopyLink,WFSharePlatformMail,WFSharePlatformYouDao,WFSharePlatformYinXiang,WFSharePlatformTencentWeibo,WFSharePlatformMessage,WFSharePlatformInstapaper,WFSharePlatformTwitter,WFSharePlatformRenRen, nil];
+      
+            break;
+        }
+            
+        case 4:
+        {
+           
+            break;
         }
         default:
             break;

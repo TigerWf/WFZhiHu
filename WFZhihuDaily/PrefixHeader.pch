@@ -20,5 +20,6 @@
 #import "UIView+Extension.h"
 #import "UIImageView+WebCache.h"
 #import "WFToastView.h"
+#import "WFSharePanelView.H"
 
 #endif /* PrefixHeader_pch */

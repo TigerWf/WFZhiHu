@@ -8,15 +8,77 @@
 
 #import "WFDetailVM.h"
 #import "WFManager+MainViewInfo.h"
+#import "WFManager+DetailInfo.h"
 
 @implementation WFDetailVM
 {
     WFDetailNewsModel *_detailModel;
     WFDetailHeaderLayout *_headerLayout;
     NSString *_currentNewsId;
+   
+}
+
+#pragma mark - 获得当前的新闻的额外信息
+- (void)requestExtraInfo:(getExtraFinish)getExtraFinish{
+
+       [WFManager wf_getNewsExtraWithID:self.singleNewsModel.newsId success:^(WFDetailExtraModel *extraModel) {
+           
+           _extraModel = extraModel;
+           getExtraFinish();
+           
+       } failure:^(WFError *error) {
+           
+       }];
 }
 
 
+#pragma mark - 获得上一条的新闻的额外信息
+- (void)getPreviousExtraData:(getDataFinish)getExtraFinish{
+    
+    NSInteger index = [_storeIdArray indexOfObject:_currentNewsId];
+    
+    if (--index >= 0) {
+        
+        NSString *previousId = [_storeIdArray objectAtIndex:index];
+        
+        
+        [WFManager wf_getNewsExtraWithID:previousId success:^(WFDetailExtraModel *extraModel) {
+            
+            _extraModel = extraModel;
+            getExtraFinish();
+
+            
+        } failure:^(WFError *error) {
+            
+        }];
+        
+    }
+
+
+}
+
+#pragma mark - 获得下一条的新闻的额外信息
+- (void)getNextExtraData:(getDataFinish)getExtraFinish{
+    NSInteger index = [_storeIdArray indexOfObject:_currentNewsId];
+    
+    if (++index < _storeIdArray.count) {
+        
+        NSString *nextId = [_storeIdArray objectAtIndex:index];
+        
+        [WFManager wf_getNewsExtraWithID:nextId success:^(WFDetailExtraModel *extraModel) {
+            
+            _extraModel = extraModel;
+            getExtraFinish();
+            
+        } failure:^(WFError *error) {
+            
+        }];
+        
+    }
+
+}
+
+#pragma mark - 获得新闻的信息
 - (void)requestWebViewData:(getDataFinish)getFinish{
     
     [WFManager wf_getNewsDetailWithID:self.singleNewsModel.newsId success:^(WFDetailNewsModel *detailModel) {
@@ -48,6 +110,7 @@
 
 }
 
+#pragma mark - 获得上一条新闻的信息
 - (void)getPreviousData:(getDataFinish)getFinish{
  
     NSInteger index = [_storeIdArray indexOfObject:_currentNewsId];
@@ -78,7 +141,7 @@
     }
 }
 
-
+#pragma mark - 获得下一条新闻的信息
 - (void)getNextData:(getDataFinish)getFinish{
 
     NSInteger index = [_storeIdArray indexOfObject:_currentNewsId];
@@ -112,6 +175,8 @@
 
 }
 
+
+#pragma mark - 新闻信息
 - (WFDetailNewsModel *)detailSourceData{
   
     return _detailModel;

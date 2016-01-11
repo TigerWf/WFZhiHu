@@ -23,19 +23,7 @@
 }
 
 
-+ (void)wf_getNewsDetailWithID:(NSString *)newsId
-                       success:(GetNewsDetailSuccessBlock)success
-                       failure:(wf_reqFailureBlock)failure{
 
-    [WFManager wf_reqWithMethod:WFRequestGET urlStr:[NSString stringWithFormat:@"news/%@",newsId] params:nil class:NSClassFromString(@"WFDetailNewsModel") success:^(id data) {
-        
-        success(data);
-        
-    } failure:^(WFError *error) {
-        
-        failure(error);
-    }];
-}
 
 + (void)wf_getPreviousNewsWithDate:(NSString *)dateStr
                            success:(GetMainViewInfoSuccessBlock)success

@@ -13,4 +13,6 @@
  */
 @interface WFLeftTopView : UIView
 
+@property(nonatomic, strong) UIImageView *avatarImage;
+
 @end
