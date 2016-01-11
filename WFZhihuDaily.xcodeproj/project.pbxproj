@@ -52,6 +52,7 @@
 		5DA913CB1C3D19F4002C23C2 /* LoadingAnimation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5DA913CA1C3D19F4002C23C2 /* LoadingAnimation.gif */; };
 		5DC065CA1C3E6077000DC68E /* WFLeftBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC065C91C3E6077000DC68E /* WFLeftBottomView.m */; };
 		5DC429A91C3E3B1D00D35955 /* WFDateHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC429A81C3E3B1D00D35955 /* WFDateHeaderView.m */; };
+		5DF495A91C4349CF00A6D1F0 /* WFOutsideWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF495A81C4349CF00A6D1F0 /* WFOutsideWebController.m */; };
 		5DF6566C1C3B6B9B00D8F8E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF6566B1C3B6B9B00D8F8E0 /* main.m */; };
 		5DF6566F1C3B6B9B00D8F8E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF6566E1C3B6B9B00D8F8E0 /* AppDelegate.m */; };
 		5DF656721C3B6B9B00D8F8E0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF656711C3B6B9B00D8F8E0 /* ViewController.m */; };
@@ -161,6 +162,8 @@
 		5DC065C91C3E6077000DC68E /* WFLeftBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFLeftBottomView.m; sourceTree = "<group>"; };
 		5DC429A71C3E3B1D00D35955 /* WFDateHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFDateHeaderView.h; sourceTree = "<group>"; };
 		5DC429A81C3E3B1D00D35955 /* WFDateHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFDateHeaderView.m; sourceTree = "<group>"; };
+		5DF495A71C4349CF00A6D1F0 /* WFOutsideWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFOutsideWebController.h; sourceTree = "<group>"; };
+		5DF495A81C4349CF00A6D1F0 /* WFOutsideWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFOutsideWebController.m; sourceTree = "<group>"; };
 		5DF656671C3B6B9B00D8F8E0 /* WFZhihuDaily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WFZhihuDaily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DF6566B1C3B6B9B00D8F8E0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5DF6566D1C3B6B9B00D8F8E0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -235,6 +238,8 @@
 			children = (
 				5D61D06C1C3BA8E7007DF434 /* WFDetailController.h */,
 				5D61D06D1C3BA8E7007DF434 /* WFDetailController.m */,
+				5DF495A71C4349CF00A6D1F0 /* WFOutsideWebController.h */,
+				5DF495A81C4349CF00A6D1F0 /* WFOutsideWebController.m */,
 			);
 			path = viewController;
 			sourceTree = "<group>";
@@ -744,6 +749,7 @@
 				5DA913711C3CBDBB002C23C2 /* WFCommonController.m in Sources */,
 				5DA9137B1C3CBDBB002C23C2 /* WFPsychicController.m in Sources */,
 				5DA913781C3CBDBB002C23C2 /* WFGameController.m in Sources */,
+				5DF495A91C4349CF00A6D1F0 /* WFOutsideWebController.m in Sources */,
 				5DF656971C3B6CC100D8F8E0 /* WFMainController.m in Sources */,
 				5DA913791C3CBDBB002C23C2 /* WFMusicController.m in Sources */,
 				5DA913541C3CBDA5002C23C2 /* WFCommonVM.m in Sources */,

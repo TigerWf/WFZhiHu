@@ -91,8 +91,9 @@
             _isHasNext = NO;
         }else{
             _isHasNext = YES;
+            
         }
-        
+        _isHasPrevious = YES;
         [WFManager wf_getNewsDetailWithID:nextId success:^(WFDetailNewsModel *detailModel) {
             
             _detailModel = detailModel;

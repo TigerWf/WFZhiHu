@@ -11,8 +11,10 @@
 #import "WFWebView.h"
 #import "WFBottomBarView.h"
 #import "WFLoadingView.h"
+#import "WFWebImageShowView.h"
+#import "WFOutsideWebController.h"
 
-@interface WFDetailController ()<WFBottomBarDelegate>
+@interface WFDetailController ()<WFBottomBarDelegate,WFWebViewDelegate>
 {
     WFWebView           *_detailWeb;
     WFDetailHeaderView  *_detailHeaderView;
@@ -58,6 +60,15 @@
     
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:NO];
+    
+    if (_detailWeb.scrollView.contentOffset.y >= 200) {
+        
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+        
+    }else{
+        
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    }
 }
 
 - (void)viewDidDisappear:(BOOL)animated{
@@ -82,6 +93,7 @@
         
         _detailWeb = [[WFWebView alloc] initWithFrame:CGRectMake(0, 20, kScreenWidth, kScreenHeight - 20 - 44)];
         _detailWeb.scrollView.delegate = self;
+        _detailWeb.webDelegate = self;
         [_containerView addSubview:_detailWeb];
 
     }
@@ -221,7 +233,27 @@
 
 }
 
+#pragma mark - WFWebViewDelegate - 
+- (void)clickActionOnHyperlink:(NSString *)linkUrl{
 
+    WFOutsideWebController *outSideWeb = [[WFOutsideWebController alloc] initWithReqUrl:linkUrl];
+    [self.navigationController pushViewController:outSideWeb animated:YES];
+
+}
+
+
+- (void)clickActionOnImage:(NSString *)imageUrl{
+
+    __block WFWebImageShowView *showImageView = [[WFWebImageShowView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight - 50) imageUrl:imageUrl];
+    
+    [showImageView show:[[UIApplication sharedApplication] keyWindow] didFinish:^{
+        [showImageView removeFromSuperview];
+        showImageView = nil;
+        
+    }];
+
+
+}
 
 
 #pragma mark - WFBottomBarDelegate -

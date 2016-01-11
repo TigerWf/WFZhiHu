@@ -59,7 +59,7 @@
     _navigationBar.backgroundColor = RGBColor(5, 143, 214, 1.0f);
     [self.view addSubview:_navigationBar];
     
-    _navigationLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, kScreenWidth, 44)];
+    _navigationLabel = [[UILabel alloc] initWithFrame:CGRectMake(50, 20, kScreenWidth - 100, 44)];
     _navigationLabel.textAlignment = NSTextAlignmentCenter;
     _navigationLabel.font = [UIFont boldSystemFontOfSize:18];
     _navigationLabel.textColor = [UIColor whiteColor];

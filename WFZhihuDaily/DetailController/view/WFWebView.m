@@ -7,7 +7,6 @@
 //
 
 #import "WFWebView.h"
-#import "WFWebImageShowView.h"
 
 @implementation WFWebView
 {
@@ -25,6 +24,25 @@
     return self;
 }
 
+#pragma mark - UIWebViewDelegate
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
+   
+    NSString *urlString = [request.URL absoluteString];
+    if ([urlString hasPrefix:@"about:blank"] ) {
+        return YES;
+    }else{
+    
+        [_webDelegate clickActionOnHyperlink:urlString];
+        return NO;
+    }
+    return NO;
+
+}
+- (void)webViewDidStartLoad:(UIWebView *)webView{
+ 
+    DLog(@"webView.url did start= %@",webView.request.URL);
+
+}
 
 #pragma mark - UIGestureRecognizerDelegate -
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
@@ -66,20 +84,14 @@
     NSString *js = [NSString stringWithFormat:@"document.elementFromPoint(%f, %f).tagName", pt.x, pt.y];
     
     NSString * tagName = [self stringByEvaluatingJavaScriptFromString:js];
-    DLog(@"tagName = %@",tagName);
+
     if ([tagName isEqualToString:@"IMG"]) {
+        
         NSString *imgURL = [NSString stringWithFormat:@"document.elementFromPoint(%f, %f).src", pt.x, pt.y];
-        NSString *urlToSave = [self stringByEvaluatingJavaScriptFromString:imgURL];
-        NSLog(@"image url=%@", urlToSave);
+        NSString *urlToShow = [self stringByEvaluatingJavaScriptFromString:imgURL];
         
+        [_webDelegate clickActionOnImage:urlToShow];
         
-        __block WFWebImageShowView *showImageView = [[WFWebImageShowView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight - 50) imageUrl:urlToSave];
-        
-        [showImageView show:[[UIApplication sharedApplication] keyWindow] didFinish:^{
-            [showImageView removeFromSuperview];
-            showImageView = nil;
-            
-        }];
     }
 
 }
