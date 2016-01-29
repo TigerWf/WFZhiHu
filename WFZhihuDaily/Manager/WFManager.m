@@ -15,6 +15,22 @@ WFReturnCode const WFReturnCodeError = @"9999";
 
 @implementation WFManager
 
+#pragma mark - 单例
+
+static WFManager *_instance;
+
++ (WFManager *)sharedManager {
+    
+    static dispatch_once_t onceToken;
+    
+    dispatch_once(&onceToken, ^{
+        
+        _instance = [[self alloc] init];
+    });
+    return _instance;
+}
+
+
 + (void)wf_baseReqWithMethod:(NSString *)method
                       urlStr:(NSString *)urlStr
                       params:(NSDictionary *)params

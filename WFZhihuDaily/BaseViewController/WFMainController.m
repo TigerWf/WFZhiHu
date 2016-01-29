@@ -135,7 +135,7 @@
       
         if (vc.showFlag == YES) {//有主动标记为最上
     
-            _markLevelVc =vc.classMark;
+            _markLevelVc = vc.classMark;
             k ++;
             
             [_containerController addChildViewController:vc];

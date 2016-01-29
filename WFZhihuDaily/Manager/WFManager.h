@@ -29,7 +29,15 @@ extern WFReturnCode const WFReturnCodeError;//9999
 @interface WFManager : NSObject
 
 /**
- *  所有的对服务器的请求均调用该方法（该方法的成功回调会返回成功后的json数据中的data字段的信息，data的类型(一般为NSDictionary、NSArray等)请参考api文档）
+ *  单例模式
+ *
+ *  @return 单例
+ */
++ (WFManager *)sharedManager;
+
+
+/**
+ *  所有请求均调用该方法
  *
  *  @param method  get post
  *  @param urlStr  api url

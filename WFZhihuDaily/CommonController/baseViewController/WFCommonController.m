@@ -7,8 +7,11 @@
 //
 
 #import "WFCommonController.h"
+#import "WFThemeNavBar.h"
 
-@interface WFCommonController ()
+@interface WFCommonController ()<UIScrollViewDelegate>
+
+@property (nonatomic, strong) WFThemeNavBar *themeNavBar;
 
 @end
 
@@ -24,12 +27,15 @@
 }
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
+    
+    self.statusBar.hidden = YES;
     self.navigationBar.hidden = YES;
-    self.mainTableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0.f, 0.f, kScreenWidth, 64.f)];
-    self.mainTableView.tableHeaderView.backgroundColor = RGBColor(35, 42, 48, 1.0);
-
-    // Do any additional setup after loading the view.
+    [self.leftBarItemButton setImage:Image(@"detail_NavBack.png") forState:0];
+    self.mainTableView.tableHeaderView = nil;
+    ((UIScrollView *)self.mainTableView).delegate = self;
+    [self.view addSubview:self.themeNavBar];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -39,19 +45,34 @@
 
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+#pragma mark - UIScrollView Delegate -
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+
+    CGFloat offSetY = scrollView.contentOffset.y;
+    
+    if (-offSetY <= 64 && -offSetY >= 0){
+        
+        [_themeNavBar wf_parallaxHeaderViewWithOffset:scrollView.contentOffset.y];
+    }
+    if (-offSetY > 64) {//到－64 让webview不再能被拉动
+        
+        self.mainTableView.contentOffset = CGPointMake(0, -64);
+        
+    }
 }
 
-/*
-#pragma mark - Navigation
+#
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - Getter
+- (WFThemeNavBar *)themeNavBar{
+
+    if (!_themeNavBar) {
+        _themeNavBar = [[WFThemeNavBar alloc] initWithFrame:CGRectMake(0, -36, kScreenWidth, 100)];
+    }
+    return _themeNavBar;
+
 }
-*/
+
 
 @end

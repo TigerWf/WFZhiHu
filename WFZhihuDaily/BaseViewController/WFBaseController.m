@@ -65,7 +65,7 @@
     _navigationLabel.textColor = [UIColor whiteColor];
     _navigationLabel.backgroundColor = [UIColor clearColor];
     
-     [self.view addSubview:_navigationLabel];
+   
     
     _leftBarItemButton = [UIButton buttonWithType:0];
     [_leftBarItemButton setImage:Image(@"leftIcon.png") forState:0];
@@ -154,6 +154,7 @@
     _refreshView.frame = CGRectMake(kScreenWidth/2 - size.width/2 - 22 - 5, 32, 22.f, 22.f);
     
     _navigationLabel.text = navigationTitle;
+    [self.view addSubview:_navigationLabel];
 
 }
 

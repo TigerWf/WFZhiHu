@@ -68,6 +68,9 @@
 		5DF656951C3B6CC100D8F8E0 /* WFBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF656871C3B6CC100D8F8E0 /* WFBaseController.m */; };
 		5DF656971C3B6CC100D8F8E0 /* WFMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF6568B1C3B6CC100D8F8E0 /* WFMainController.m */; };
 		9562680C9046DAF9802DE4C0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56D18C7690F4F098F76ED7B6 /* libPods.a */; };
+		AADF34231C5B179D00E05CDE /* WFThemeNavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = AADF34221C5B179D00E05CDE /* WFThemeNavBar.m */; };
+		AADF34261C5B25B700E05CDE /* WFThemeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AADF34251C5B25B700E05CDE /* WFThemeModel.m */; };
+		AAF7D2561C5B1025005DB5C5 /* WFLaunchController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF7D2551C5B1025005DB5C5 /* WFLaunchController.m */; };
 		D282F7061C40192200D15426 /* WFLeftContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = D282F7051C40192200D15426 /* WFLeftContainer.m */; };
 		D288D4691C3C1DE00034B742 /* WFLeftController.m in Sources */ = {isa = PBXBuildFile; fileRef = D288D4681C3C1DE00034B742 /* WFLeftController.m */; };
 		D288D46C1C3C1E050034B742 /* WFLeftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D288D46B1C3C1E050034B742 /* WFLeftCell.m */; };
@@ -200,6 +203,12 @@
 		5DF6568A1C3B6CC100D8F8E0 /* WFMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFMainController.h; sourceTree = "<group>"; };
 		5DF6568B1C3B6CC100D8F8E0 /* WFMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFMainController.m; sourceTree = "<group>"; };
 		8420BF67AF1838D7B6CC5DB5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		AADF34211C5B179D00E05CDE /* WFThemeNavBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WFThemeNavBar.h; path = WFZhihuDaily/Category/WFThemeNavBar.h; sourceTree = SOURCE_ROOT; };
+		AADF34221C5B179D00E05CDE /* WFThemeNavBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WFThemeNavBar.m; path = WFZhihuDaily/Category/WFThemeNavBar.m; sourceTree = SOURCE_ROOT; };
+		AADF34241C5B25B700E05CDE /* WFThemeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WFThemeModel.h; path = WFZhihuDaily/Category/WFThemeModel.h; sourceTree = SOURCE_ROOT; };
+		AADF34251C5B25B700E05CDE /* WFThemeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WFThemeModel.m; path = WFZhihuDaily/Category/WFThemeModel.m; sourceTree = SOURCE_ROOT; };
+		AAF7D2541C5B1025005DB5C5 /* WFLaunchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFLaunchController.h; sourceTree = "<group>"; };
+		AAF7D2551C5B1025005DB5C5 /* WFLaunchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFLaunchController.m; sourceTree = "<group>"; };
 		D282F7041C40192200D15426 /* WFLeftContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFLeftContainer.h; sourceTree = "<group>"; };
 		D282F7051C40192200D15426 /* WFLeftContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFLeftContainer.m; sourceTree = "<group>"; };
 		D288D4671C3C1DE00034B742 /* WFLeftController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFLeftController.h; sourceTree = "<group>"; };
@@ -340,6 +349,8 @@
 		5DA9134F1C3CBD8E002C23C2 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				AADF34241C5B25B700E05CDE /* WFThemeModel.h */,
+				AADF34251C5B25B700E05CDE /* WFThemeModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -347,6 +358,8 @@
 		5DA913501C3CBD8E002C23C2 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				AADF34211C5B179D00E05CDE /* WFThemeNavBar.h */,
+				AADF34221C5B179D00E05CDE /* WFThemeNavBar.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -494,6 +507,7 @@
 				5DF656711C3B6B9B00D8F8E0 /* ViewController.m */,
 				5DF495B61C438FB100A6D1F0 /* CommonView */,
 				5DA913BE1C3D0D0A002C23C2 /* Resource */,
+				AAF7D2521C5B0F93005DB5C5 /* LaunchController */,
 				5DF656921C3B6CC100D8F8E0 /* SettingController */,
 				5DF6568F1C3B6CC100D8F8E0 /* HomePageController */,
 				5DF6568C1C3B6CC100D8F8E0 /* CommonController */,
@@ -581,6 +595,23 @@
 				8420BF67AF1838D7B6CC5DB5 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		AAF7D2521C5B0F93005DB5C5 /* LaunchController */ = {
+			isa = PBXGroup;
+			children = (
+				AAF7D2531C5B0FF1005DB5C5 /* viewController */,
+			);
+			path = LaunchController;
+			sourceTree = "<group>";
+		};
+		AAF7D2531C5B0FF1005DB5C5 /* viewController */ = {
+			isa = PBXGroup;
+			children = (
+				AAF7D2541C5B1025005DB5C5 /* WFLaunchController.h */,
+				AAF7D2551C5B1025005DB5C5 /* WFLaunchController.m */,
+			);
+			path = viewController;
 			sourceTree = "<group>";
 		};
 		CC1118F480BDE64B82385796 /* Frameworks */ = {
@@ -773,6 +804,7 @@
 				5DF495C11C438FB100A6D1F0 /* WFAutoLoopView.m in Sources */,
 				5DC065CA1C3E6077000DC68E /* WFLeftBottomView.m in Sources */,
 				5DA913C31C3D0FF5002C23C2 /* WFBottomBarView.m in Sources */,
+				AADF34231C5B179D00E05CDE /* WFThemeNavBar.m in Sources */,
 				5DA9137D1C3CBDBB002C23C2 /* WFSportController.m in Sources */,
 				5DF495AC1C43583300A6D1F0 /* WFOutsideWebBottomBarView.m in Sources */,
 				5DA913B71C3CF628002C23C2 /* WFWebView.m in Sources */,
@@ -808,6 +840,8 @@
 				5D61D08D1C3BAF76007DF434 /* WFHomePageVM.m in Sources */,
 				5DF495B21C43795000A6D1F0 /* WFDetailExtraModel.m in Sources */,
 				5DF656951C3B6CC100D8F8E0 /* WFBaseController.m in Sources */,
+				AADF34261C5B25B700E05CDE /* WFThemeModel.m in Sources */,
+				AAF7D2561C5B1025005DB5C5 /* WFLaunchController.m in Sources */,
 				5D6EA2911C3BC5B400C9462E /* WFSingelNewsLayout.m in Sources */,
 				5DF495C41C438FB100A6D1F0 /* WFToastView.m in Sources */,
 				D282F7061C40192200D15426 /* WFLeftContainer.m in Sources */,
@@ -862,6 +896,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -881,9 +916,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -906,6 +942,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -919,8 +956,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -939,6 +977,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xiupin.WFZhihuDaily;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -954,6 +993,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xiupin.WFZhihuDaily;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
