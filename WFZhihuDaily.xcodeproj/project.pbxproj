@@ -68,8 +68,12 @@
 		5DF656951C3B6CC100D8F8E0 /* WFBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF656871C3B6CC100D8F8E0 /* WFBaseController.m */; };
 		5DF656971C3B6CC100D8F8E0 /* WFMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF6568B1C3B6CC100D8F8E0 /* WFMainController.m */; };
 		9562680C9046DAF9802DE4C0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56D18C7690F4F098F76ED7B6 /* libPods.a */; };
-		AADF34231C5B179D00E05CDE /* WFThemeNavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = AADF34221C5B179D00E05CDE /* WFThemeNavBar.m */; };
-		AADF34261C5B25B700E05CDE /* WFThemeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AADF34251C5B25B700E05CDE /* WFThemeModel.m */; };
+		AADF34291C5B3B8100E05CDE /* WFManager+ThemeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = AADF34281C5B3B8100E05CDE /* WFManager+ThemeInfo.m */; };
+		AADF343E1C5B477100E05CDE /* WFThemeNavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = AADF343D1C5B477100E05CDE /* WFThemeNavBar.m */; };
+		AADF34451C5B477B00E05CDE /* WFEditorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AADF34401C5B477B00E05CDE /* WFEditorModel.m */; };
+		AADF34461C5B477B00E05CDE /* WFThemeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AADF34421C5B477B00E05CDE /* WFThemeModel.m */; };
+		AADF34471C5B477B00E05CDE /* WFThemeNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AADF34441C5B477B00E05CDE /* WFThemeNewsModel.m */; };
+		AADF344B1C5B47B200E05CDE /* WFEditorView.m in Sources */ = {isa = PBXBuildFile; fileRef = AADF34491C5B47B200E05CDE /* WFEditorView.m */; };
 		AAF7D2561C5B1025005DB5C5 /* WFLaunchController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF7D2551C5B1025005DB5C5 /* WFLaunchController.m */; };
 		D282F7061C40192200D15426 /* WFLeftContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = D282F7051C40192200D15426 /* WFLeftContainer.m */; };
 		D288D4691C3C1DE00034B742 /* WFLeftController.m in Sources */ = {isa = PBXBuildFile; fileRef = D288D4681C3C1DE00034B742 /* WFLeftController.m */; };
@@ -203,10 +207,18 @@
 		5DF6568A1C3B6CC100D8F8E0 /* WFMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFMainController.h; sourceTree = "<group>"; };
 		5DF6568B1C3B6CC100D8F8E0 /* WFMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFMainController.m; sourceTree = "<group>"; };
 		8420BF67AF1838D7B6CC5DB5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		AADF34211C5B179D00E05CDE /* WFThemeNavBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WFThemeNavBar.h; path = WFZhihuDaily/Category/WFThemeNavBar.h; sourceTree = SOURCE_ROOT; };
-		AADF34221C5B179D00E05CDE /* WFThemeNavBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WFThemeNavBar.m; path = WFZhihuDaily/Category/WFThemeNavBar.m; sourceTree = SOURCE_ROOT; };
-		AADF34241C5B25B700E05CDE /* WFThemeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WFThemeModel.h; path = WFZhihuDaily/Category/WFThemeModel.h; sourceTree = SOURCE_ROOT; };
-		AADF34251C5B25B700E05CDE /* WFThemeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WFThemeModel.m; path = WFZhihuDaily/Category/WFThemeModel.m; sourceTree = SOURCE_ROOT; };
+		AADF34271C5B3B8100E05CDE /* WFManager+ThemeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WFManager+ThemeInfo.h"; sourceTree = "<group>"; };
+		AADF34281C5B3B8100E05CDE /* WFManager+ThemeInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WFManager+ThemeInfo.m"; sourceTree = "<group>"; };
+		AADF343C1C5B477100E05CDE /* WFThemeNavBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFThemeNavBar.h; sourceTree = "<group>"; };
+		AADF343D1C5B477100E05CDE /* WFThemeNavBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFThemeNavBar.m; sourceTree = "<group>"; };
+		AADF343F1C5B477B00E05CDE /* WFEditorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFEditorModel.h; sourceTree = "<group>"; };
+		AADF34401C5B477B00E05CDE /* WFEditorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFEditorModel.m; sourceTree = "<group>"; };
+		AADF34411C5B477B00E05CDE /* WFThemeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFThemeModel.h; sourceTree = "<group>"; };
+		AADF34421C5B477B00E05CDE /* WFThemeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFThemeModel.m; sourceTree = "<group>"; };
+		AADF34431C5B477B00E05CDE /* WFThemeNewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFThemeNewsModel.h; sourceTree = "<group>"; };
+		AADF34441C5B477B00E05CDE /* WFThemeNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFThemeNewsModel.m; sourceTree = "<group>"; };
+		AADF34481C5B47B200E05CDE /* WFEditorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFEditorView.h; sourceTree = "<group>"; };
+		AADF34491C5B47B200E05CDE /* WFEditorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFEditorView.m; sourceTree = "<group>"; };
 		AAF7D2541C5B1025005DB5C5 /* WFLaunchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFLaunchController.h; sourceTree = "<group>"; };
 		AAF7D2551C5B1025005DB5C5 /* WFLaunchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFLaunchController.m; sourceTree = "<group>"; };
 		D282F7041C40192200D15426 /* WFLeftContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFLeftContainer.h; sourceTree = "<group>"; };
@@ -305,6 +317,8 @@
 				5D61D0801C3BAA1D007DF434 /* WFManager+MainViewInfo.m */,
 				5DF495AD1C4378AB00A6D1F0 /* WFManager+DetailInfo.h */,
 				5DF495AE1C4378AB00A6D1F0 /* WFManager+DetailInfo.m */,
+				AADF34271C5B3B8100E05CDE /* WFManager+ThemeInfo.h */,
+				AADF34281C5B3B8100E05CDE /* WFManager+ThemeInfo.m */,
 			);
 			path = WFHttpRequest;
 			sourceTree = "<group>";
@@ -344,24 +358,6 @@
 				5D61D08C1C3BAF76007DF434 /* WFHomePageVM.m */,
 			);
 			path = viewModel;
-			sourceTree = "<group>";
-		};
-		5DA9134F1C3CBD8E002C23C2 /* model */ = {
-			isa = PBXGroup;
-			children = (
-				AADF34241C5B25B700E05CDE /* WFThemeModel.h */,
-				AADF34251C5B25B700E05CDE /* WFThemeModel.m */,
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		5DA913501C3CBD8E002C23C2 /* view */ = {
-			isa = PBXGroup;
-			children = (
-				AADF34211C5B179D00E05CDE /* WFThemeNavBar.h */,
-				AADF34221C5B179D00E05CDE /* WFThemeNavBar.m */,
-			);
-			path = view;
 			sourceTree = "<group>";
 		};
 		5DA913511C3CBD8E002C23C2 /* viewModel */ = {
@@ -560,10 +556,10 @@
 		5DF6568C1C3B6CC100D8F8E0 /* CommonController */ = {
 			isa = PBXGroup;
 			children = (
+				AADF343A1C5B470D00E05CDE /* model */,
+				AADF343B1C5B470D00E05CDE /* view */,
 				5DA913551C3CBDBB002C23C2 /* baseViewController */,
 				5DA913581C3CBDBB002C23C2 /* viewControllers */,
-				5DA9134F1C3CBD8E002C23C2 /* model */,
-				5DA913501C3CBD8E002C23C2 /* view */,
 				5DA913511C3CBD8E002C23C2 /* viewModel */,
 			);
 			path = CommonController;
@@ -595,6 +591,30 @@
 				8420BF67AF1838D7B6CC5DB5 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		AADF343A1C5B470D00E05CDE /* model */ = {
+			isa = PBXGroup;
+			children = (
+				AADF343F1C5B477B00E05CDE /* WFEditorModel.h */,
+				AADF34401C5B477B00E05CDE /* WFEditorModel.m */,
+				AADF34411C5B477B00E05CDE /* WFThemeModel.h */,
+				AADF34421C5B477B00E05CDE /* WFThemeModel.m */,
+				AADF34431C5B477B00E05CDE /* WFThemeNewsModel.h */,
+				AADF34441C5B477B00E05CDE /* WFThemeNewsModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		AADF343B1C5B470D00E05CDE /* view */ = {
+			isa = PBXGroup;
+			children = (
+				AADF343C1C5B477100E05CDE /* WFThemeNavBar.h */,
+				AADF343D1C5B477100E05CDE /* WFThemeNavBar.m */,
+				AADF34481C5B47B200E05CDE /* WFEditorView.h */,
+				AADF34491C5B47B200E05CDE /* WFEditorView.m */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		AAF7D2521C5B0F93005DB5C5 /* LaunchController */ = {
@@ -804,9 +824,9 @@
 				5DF495C11C438FB100A6D1F0 /* WFAutoLoopView.m in Sources */,
 				5DC065CA1C3E6077000DC68E /* WFLeftBottomView.m in Sources */,
 				5DA913C31C3D0FF5002C23C2 /* WFBottomBarView.m in Sources */,
-				AADF34231C5B179D00E05CDE /* WFThemeNavBar.m in Sources */,
 				5DA9137D1C3CBDBB002C23C2 /* WFSportController.m in Sources */,
 				5DF495AC1C43583300A6D1F0 /* WFOutsideWebBottomBarView.m in Sources */,
+				AADF34461C5B477B00E05CDE /* WFThemeModel.m in Sources */,
 				5DA913B71C3CF628002C23C2 /* WFWebView.m in Sources */,
 				5DA913761C3CBDBB002C23C2 /* WFFilmController.m in Sources */,
 				5D61D0841C3BAA1D007DF434 /* WFHttpMgr.m in Sources */,
@@ -816,6 +836,7 @@
 				5DA913711C3CBDBB002C23C2 /* WFCommonController.m in Sources */,
 				5DA9137B1C3CBDBB002C23C2 /* WFPsychicController.m in Sources */,
 				5DA913781C3CBDBB002C23C2 /* WFGameController.m in Sources */,
+				AADF34451C5B477B00E05CDE /* WFEditorModel.m in Sources */,
 				5DF495A91C4349CF00A6D1F0 /* WFOutsideWebController.m in Sources */,
 				5DF495C21C438FB100A6D1F0 /* WFLoadingView.m in Sources */,
 				5DF656971C3B6CC100D8F8E0 /* WFMainController.m in Sources */,
@@ -826,6 +847,7 @@
 				5DF495C91C438FFB00A6D1F0 /* WFSharePanelView.m in Sources */,
 				5DA913B41C3CF189002C23C2 /* WFDetailNewsModel.m in Sources */,
 				5DA913AB1C3CDB2B002C23C2 /* WFDetailVM.m in Sources */,
+				AADF34471C5B477B00E05CDE /* WFThemeNewsModel.m in Sources */,
 				D288D46C1C3C1E050034B742 /* WFLeftCell.m in Sources */,
 				5DA913BA1C3CF832002C23C2 /* WFDetailHeaderLayout.m in Sources */,
 				5DF495CA1C438FFB00A6D1F0 /* WFWebImageShowView.m in Sources */,
@@ -840,7 +862,6 @@
 				5D61D08D1C3BAF76007DF434 /* WFHomePageVM.m in Sources */,
 				5DF495B21C43795000A6D1F0 /* WFDetailExtraModel.m in Sources */,
 				5DF656951C3B6CC100D8F8E0 /* WFBaseController.m in Sources */,
-				AADF34261C5B25B700E05CDE /* WFThemeModel.m in Sources */,
 				AAF7D2561C5B1025005DB5C5 /* WFLaunchController.m in Sources */,
 				5D6EA2911C3BC5B400C9462E /* WFSingelNewsLayout.m in Sources */,
 				5DF495C41C438FB100A6D1F0 /* WFToastView.m in Sources */,
@@ -848,9 +869,12 @@
 				5DA9137A1C3CBDBB002C23C2 /* WFNetSecurityController.m in Sources */,
 				5D61D0901C3BB07C007DF434 /* WFSingelNewsModel.m in Sources */,
 				5DF6566F1C3B6B9B00D8F8E0 /* AppDelegate.m in Sources */,
+				AADF34291C5B3B8100E05CDE /* WFManager+ThemeInfo.m in Sources */,
 				5D61D06E1C3BA8E7007DF434 /* WFDetailController.m in Sources */,
 				5D9C08D21C3FB5F400F4B6CF /* WFLeftTopView.m in Sources */,
 				5DA913AE1C3CDE3A002C23C2 /* WFDetailHeaderView.m in Sources */,
+				AADF343E1C5B477100E05CDE /* WFThemeNavBar.m in Sources */,
+				AADF344B1C5B47B200E05CDE /* WFEditorView.m in Sources */,
 				5D61D0861C3BAA1D007DF434 /* WFManager.m in Sources */,
 				5D6EA2941C3BC66900C9462E /* UIImageView+WFImg.m in Sources */,
 				5DA913871C3CD33B002C23C2 /* WFBannerView.m in Sources */,

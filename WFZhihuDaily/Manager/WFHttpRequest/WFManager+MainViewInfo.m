@@ -52,19 +52,4 @@
 
 }
 
-
-+ (void)wf_getThemesSuccess:(wf_reqSuccessBlock)success
-                    failure:(wf_reqFailureBlock)failure{
-
-    NSString *appendStr = [NSString stringWithFormat:@"themes"];
-    
-    [WFManager wf_reqWithMethod:WFRequestGET urlStr:appendStr params:nil class:nil success:^(id data) {
-        
-        success(data);
-        
-    } failure:^(WFError *error) {
-        failure(error);
-    }];
-}
-
 @end

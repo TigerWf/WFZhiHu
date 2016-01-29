@@ -13,14 +13,16 @@
 - (id)initWithFrame:(CGRect)frame{
 
     if (self == [super initWithFrame:frame]) {
-       self.backgroundColor = RGBColor(35, 42, 48, 1.0);
+        self.backgroundColor = RGBColor(35, 42, 48, 1.0);
+        self.clipsToBounds = YES;
+        self.contentMode = UIViewContentModeScaleAspectFill;
     }
     return self;
 }
 
 - (void)wf_parallaxHeaderViewWithOffset:(CGFloat)offset{
 
-    self.frame = CGRectMake(0, -36 - offset/2, kScreenWidth, 100 - offset/2);
+    self.frame = CGRectMake(0, -74 - offset/2, kScreenWidth, 138 - offset/2);
     
 }
 

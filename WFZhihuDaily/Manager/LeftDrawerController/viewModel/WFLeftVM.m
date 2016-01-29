@@ -7,6 +7,7 @@
 //
 
 #import "WFLeftVM.h"
+#import "WFManager+MainViewInfo.h"
 
 @implementation WFLeftVM
 {

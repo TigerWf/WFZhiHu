@@ -10,9 +10,7 @@
 
 @interface WFThemeModel : NSObject
 
-@property (nonatomic, copy) NSString *thumbnail;//图片地址
-
-@property (nonatomic, copy) NSNumber *themeId;//编号
+@property (nonatomic, copy) NSString *themeId;//编号
 
 @property (nonatomic, copy) NSString *themeName;//名称
 

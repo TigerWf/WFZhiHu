@@ -86,6 +86,7 @@ static WFManager *_instance;
                  failure:(wf_reqFailureBlock)failure{
     
     [self wf_baseReqWithMethod:method urlStr:urlStr params:params success:^(id data) {
+        
         if (cls == nil) {
             success(data);
         }else{
@@ -93,7 +94,6 @@ static WFManager *_instance;
      
         }
 
-        
     } failure:failure];
 }
 

@@ -8,11 +8,17 @@
 
 #import "WFBaseController.h"
 #import "WFCommonVM.h"
+#import "WFThemeModel.h"
 
 @interface WFCommonController : WFBaseController
 
 @property(strong,nonatomic) WFCommonVM *viewModel;
 
 - (instancetype)initWithViewModel:(WFCommonVM *)viewModel;
+
+/**
+ *  设置导航ui
+ */
+- (void)configNavBarUI;
 
 @end
