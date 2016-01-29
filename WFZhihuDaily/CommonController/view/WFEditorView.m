@@ -43,7 +43,7 @@
 - (void)setAvatarImageArr:(NSArray *)avatarImageArr{
   
     float braBtnX = 60;
-    
+    DLog(@"go here");
     for (WFEditorModel *editor in avatarImageArr) {
         
         UIImageView *avatarImg = [[UIImageView alloc ] init];

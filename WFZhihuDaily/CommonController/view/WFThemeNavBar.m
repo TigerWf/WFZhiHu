@@ -16,14 +16,33 @@
         self.backgroundColor = RGBColor(35, 42, 48, 1.0);
         self.clipsToBounds = YES;
         self.contentMode = UIViewContentModeScaleAspectFill;
+        [self configBlurView];
     }
     return self;
 }
 
-- (void)wf_parallaxHeaderViewWithOffset:(CGFloat)offset{
 
-    self.frame = CGRectMake(0, -74 - offset/2, kScreenWidth, 138 - offset/2);
+- (void)configBlurView{
+
+    _blurView = [[FXBlurView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 138)];
+    [self addSubview:_blurView];
+    _blurView.tintColor = [UIColor clearColor];
+    _blurView.hidden = YES;
+
+}
+
+- (void)wf_parallaxHeaderViewWithOffset:(CGFloat)offset{
     
+    if (offset == 0.f) {
+        _blurView.hidden = YES;
+    }else{
+        _blurView.hidden = NO;
+        _blurView.blurRadius = -offset/2;
+    }
+    self.frame = CGRectMake(0, -74 - offset/2, kScreenWidth, 138 - offset/2);
+    _blurView.frame = CGRectMake(0, 0, kScreenWidth, 138 - offset/2);
+
+  
 }
 
 @end

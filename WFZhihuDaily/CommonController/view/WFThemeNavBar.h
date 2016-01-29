@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "FXBlurView.h"
 @interface WFThemeNavBar : UIImageView
+
+@property (nonatomic, strong) FXBlurView *blurView;
 
 /**
  *  添加下拉表头的动画
