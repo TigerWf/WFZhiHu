@@ -10,6 +10,8 @@
 #import "WFThemeNavBar.h"
 #import "WFMainViewCell.h"
 #import "WFEditorView.h"
+#import "AppDelegate.h"
+#import "WFMainController.h"
 
 @interface WFCommonController ()<UITableViewDataSource,UITableViewDelegate>
 {
@@ -114,6 +116,20 @@ static NSString * const kCellID = @"WFCell";
     return cell;
 }
 
+#pragma mark - Private Method -
+
+- (void)openLeftDrawer{
+    
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    if ([appDelegate.window.rootViewController isKindOfClass:[WFMainController class]]) {
+        WFMainController *mainVc = (WFMainController *)appDelegate.window.rootViewController;
+        if (mainVc.isFold == YES) {
+            [mainVc hideDrawerList];
+        }else{
+            [mainVc showDrawerList];
+        }
+    }
+}
 
 #pragma mark - Public Methods
 - (void)configNavBarUI{

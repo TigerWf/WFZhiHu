@@ -22,6 +22,7 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     
     self = [super initWithFrame:frame];
+    
     if (self) {
         self.backgroundColor = [UIColor clearColor];
         _indicatorView = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
@@ -39,11 +40,6 @@
     }
 
     CGFloat radius = (self.width - 5) / 2;
-    CGContextRef context1 = UIGraphicsGetCurrentContext();
-    CGContextAddArc(context1, self.width / 2, self.width / 2, radius,0, M_PI * 2, 0);
-    [[UIColor lightGrayColor] set];
-    CGContextStrokePath(context1);
-    
     CGContextRef context2 = UIGraphicsGetCurrentContext();
     CGFloat endAngle =  2 * M_PI * self.progress;
     CGContextAddArc(context2, self.width / 2, self.width / 2, radius, 0, endAngle, 0);
@@ -53,7 +49,7 @@
 }
 
 
-- (void)redrawFromProgress:(CGFloat)progress {
+- (void)circleDependProgress:(CGFloat)progress {
     
     if (progress > 1) {
         return;

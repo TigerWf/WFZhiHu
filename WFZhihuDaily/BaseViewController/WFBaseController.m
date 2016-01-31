@@ -97,15 +97,15 @@
         if (offSetY <= 0 && offSetY >= -80) {
             if (-offSetY <= 40) {
                 if (!_isLoading) {
-                    [_refreshView redrawFromProgress:-offSetY/40];
+                    [_refreshView circleDependProgress:-offSetY/40];
                 }else{
-                    [_refreshView redrawFromProgress:0];
+                    [_refreshView circleDependProgress:0];
                 }
             }
            
             if(!_isLoading && !scrollView.isDragging && -offSetY>40 && -offSetY<=80){
                 
-                [_refreshView redrawFromProgress:0];
+                [_refreshView circleDependProgress:0];
                 [_refreshView startAnimation];
                 [self requestNewData];
               
@@ -113,10 +113,10 @@
             
             
         }else if(offSetY <- 80){
-            [_refreshView redrawFromProgress:1];
+            [_refreshView circleDependProgress:1];
         }else if(offSetY <= 300) {
             
-            [_refreshView redrawFromProgress:0];
+            [_refreshView circleDependProgress:0];
         }
         
         if (offSetY + 80 > scrollView.contentSize.height - kScreenHeight) {

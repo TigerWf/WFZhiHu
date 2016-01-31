@@ -10,7 +10,7 @@
 
 @interface WFRefreshView : UIView
 
-- (void)redrawFromProgress:(CGFloat)progress;
+- (void)circleDependProgress:(CGFloat)progress;
 - (void)startAnimation;
 - (void)stopAnimation;
 
