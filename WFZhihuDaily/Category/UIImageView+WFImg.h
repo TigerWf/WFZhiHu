@@ -14,4 +14,6 @@ typedef void(^WFWebImageCompletionWithFinishedBlock)(UIImage *image);
 
 - (void)wf_setImageWithUrlString:(NSString *)urlString placeholderImage:(UIImage *)placeHolderImage;
 
+- (void)wf_setImageWithUrlString:(NSString *)urlString placeholderImage:(UIImage *)placeHolderImage completed:(WFWebImageCompletionWithFinishedBlock)completedBlock;
+
 @end

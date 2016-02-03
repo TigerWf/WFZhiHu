@@ -68,7 +68,7 @@
 		5DF656951C3B6CC100D8F8E0 /* WFBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF656871C3B6CC100D8F8E0 /* WFBaseController.m */; };
 		5DF656971C3B6CC100D8F8E0 /* WFMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF6568B1C3B6CC100D8F8E0 /* WFMainController.m */; };
 		9562680C9046DAF9802DE4C0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56D18C7690F4F098F76ED7B6 /* libPods.a */; };
-		AACE8B6C1C5B6D31001498D9 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = AACE8B6B1C5B6D31001498D9 /* FXBlurView.m */; };
+		AAA1AFAC1C6209C3009FB90E /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = AAA1AFAB1C6209C3009FB90E /* UIImage+ImageEffects.m */; };
 		AADF34291C5B3B8100E05CDE /* WFManager+ThemeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = AADF34281C5B3B8100E05CDE /* WFManager+ThemeInfo.m */; };
 		AADF343E1C5B477100E05CDE /* WFThemeNavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = AADF343D1C5B477100E05CDE /* WFThemeNavBar.m */; };
 		AADF34451C5B477B00E05CDE /* WFEditorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AADF34401C5B477B00E05CDE /* WFEditorModel.m */; };
@@ -208,8 +208,8 @@
 		5DF6568A1C3B6CC100D8F8E0 /* WFMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFMainController.h; sourceTree = "<group>"; };
 		5DF6568B1C3B6CC100D8F8E0 /* WFMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFMainController.m; sourceTree = "<group>"; };
 		8420BF67AF1838D7B6CC5DB5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		AACE8B6A1C5B6D31001498D9 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
-		AACE8B6B1C5B6D31001498D9 /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
+		AAA1AFAA1C6209C3009FB90E /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		AAA1AFAB1C6209C3009FB90E /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		AADF34271C5B3B8100E05CDE /* WFManager+ThemeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WFManager+ThemeInfo.h"; sourceTree = "<group>"; };
 		AADF34281C5B3B8100E05CDE /* WFManager+ThemeInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WFManager+ThemeInfo.m"; sourceTree = "<group>"; };
 		AADF343C1C5B477100E05CDE /* WFThemeNavBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFThemeNavBar.h; sourceTree = "<group>"; };
@@ -262,6 +262,8 @@
 		5D61D0641C3B9FFF007DF434 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				AAA1AFAA1C6209C3009FB90E /* UIImage+ImageEffects.h */,
+				AAA1AFAB1C6209C3009FB90E /* UIImage+ImageEffects.m */,
 				5D61D0651C3B9FFF007DF434 /* UINavigationController+XPPopGesture.h */,
 				5D61D0661C3B9FFF007DF434 /* UINavigationController+XPPopGesture.m */,
 				5D6EA2921C3BC66900C9462E /* UIImageView+WFImg.h */,
@@ -473,8 +475,6 @@
 				5DF495C61C438FFB00A6D1F0 /* WFSharePanelView.m */,
 				5DF495CB1C43A28E00A6D1F0 /* WFShareButton.h */,
 				5DF495CC1C43A28E00A6D1F0 /* WFShareButton.m */,
-				AACE8B6A1C5B6D31001498D9 /* FXBlurView.h */,
-				AACE8B6B1C5B6D31001498D9 /* FXBlurView.m */,
 				5DF495C71C438FFB00A6D1F0 /* WFWebImageShowView.h */,
 				5DF495C81C438FFB00A6D1F0 /* WFWebImageShowView.m */,
 			);
@@ -831,7 +831,6 @@
 				5DA913C31C3D0FF5002C23C2 /* WFBottomBarView.m in Sources */,
 				5DA9137D1C3CBDBB002C23C2 /* WFSportController.m in Sources */,
 				5DF495AC1C43583300A6D1F0 /* WFOutsideWebBottomBarView.m in Sources */,
-				AACE8B6C1C5B6D31001498D9 /* FXBlurView.m in Sources */,
 				AADF34461C5B477B00E05CDE /* WFThemeModel.m in Sources */,
 				5DA913B71C3CF628002C23C2 /* WFWebView.m in Sources */,
 				5DA913761C3CBDBB002C23C2 /* WFFilmController.m in Sources */,
@@ -839,6 +838,7 @@
 				5DA913751C3CBDBB002C23C2 /* WFDonotBoredController.m in Sources */,
 				5DF495AF1C4378AB00A6D1F0 /* WFManager+DetailInfo.m in Sources */,
 				D288D4691C3C1DE00034B742 /* WFLeftController.m in Sources */,
+				AAA1AFAC1C6209C3009FB90E /* UIImage+ImageEffects.m in Sources */,
 				5DA913711C3CBDBB002C23C2 /* WFCommonController.m in Sources */,
 				5DA9137B1C3CBDBB002C23C2 /* WFPsychicController.m in Sources */,
 				5DA913781C3CBDBB002C23C2 /* WFGameController.m in Sources */,

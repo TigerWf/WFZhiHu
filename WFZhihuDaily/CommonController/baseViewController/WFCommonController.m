@@ -140,7 +140,10 @@ static NSString * const kCellID = @"WFCell";
 
 - (void)refreshNavBarUI{
 
-    [_themeNavBar wf_setImageWithUrlString:_viewModel.themeNewsModel.background placeholderImage:nil];
+    [_themeNavBar wf_setImageWithUrlString:_viewModel.themeNewsModel.background placeholderImage:nil completed:^(UIImage *image) {
+        _themeNavBar.blurImage = image;
+    }];
+    
 }
 
 - (void)refreshHeaderUI{
